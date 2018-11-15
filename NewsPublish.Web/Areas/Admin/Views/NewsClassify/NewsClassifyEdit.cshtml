@@ -1,0 +1,59 @@
+﻿@model NewsPublish.Model.Response.ResponseModel
+@{
+    ViewBag.Title = "添加新闻类别";
+}
+
+<div class="pd-20">
+    <div class="Huiform">
+        <form method="post" id="editNewsClassify">
+            <table class="table table-bg">
+                <tbody>
+                    <tr>
+                        <th class="text-r">类别名编号：</th>
+                        <td><input type="text" style="width:300px" class="input-text" value="@Model.Data.Id" placeholder="" id="Id" name="Id" readonly></td>
+                    </tr>
+                    <tr>
+                        <th class="text-r">类别名称：</th>
+                        <td><input type="text" style="width:300px" class="input-text" value="@Model.Data.Name" placeholder="" id="name" name="name" datatype="*2-120" nullmsg="类别名称不能为空"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-r">排序：</th>
+                        <td><input type="text" style="width:300px" class="input-text" value="@Model.Data.Sort" placeholder="" id="sort" name="sort"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-r">备注：</th>
+                        <td><input type="text" style="width:300px" class="input-text" value="@Model.Data.Remark" placeholder="" id="remark" name="remark"></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><button class="btn btn-success radius" type="button" onclick="editNewsClassify()"><i class="icon-ok"></i> 确定</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript">
+        $(".Huiform").Validform();
+        function editNewsClassify() {
+            var formData = new FormData(document.getElementById("editNewsClassify"));
+            $.ajax({
+                type: "post",
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                url: '/Admin/NewsClassify/EditNewsClassify',
+                data: formData,
+                success: function (data) {
+                    if (data.code == 200) {
+                        parent.reload();
+                    } else {
+                        alert(data.result);
+                    }
+                }
+            });
+        }
+    </script>
+}

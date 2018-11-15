@@ -1,0 +1,44 @@
+﻿@model NewsPublish.Model.Response.ResponseModel
+
+@{
+    ViewBag.Title = "新闻类别";
+}
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span> 新闻中心 <span class="c-gray en">&gt;</span> 新闻类别 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="icon-refresh"></i></a></nav>
+<div class="pd-20">
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+        <span class="l"><a href="javascript:;" onClick="user_add('550','300','添加新闻类别','newsclassifyadd')" class="btn btn-primary radius"><i class="icon-plus"></i> 添加新闻类别</a></span>
+    </div>
+    <table class="table table-border table-bordered table-hover table-bg table-sort">
+        <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="80">ID</th>
+                <th width="200">类别名称</th>
+                <th width="90">排序</th>
+                <th>备注</th>
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in @Model.Data)
+            {
+                <tr class="text-c">
+                    <td><input type="checkbox" value="@c.Id" name=""></td>
+                    <td>@c.Id</td>
+                    <td>@c.Name</td>
+                    <td>@c.Sort</td>
+                    <td>@c.Remark</td>
+                    <td><a title="编辑" href="javascript:;" onClick="user_edit('4','550','300','编辑','NewsClassifyEdit/@c.Id')" class="ml-5" style="text-decoration:none"><i class="icon-edit"></i></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    <script>
+        function reload() {
+            location.replace(location.href);
+        }
+    </script>
+}
