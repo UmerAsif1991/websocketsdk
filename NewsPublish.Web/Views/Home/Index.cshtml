@@ -5,19 +5,7 @@
 
 <div class="content-wrap">
     <div class="content" id="content">
-        <div id="focusslide" class="carousel slide" data-ride="carousel">
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#focusslide" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">上一个</span>
-            </a>
-            <a class="right carousel-control" href="#focusslide" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">下一个</span>
-            </a>
-        </div>
-
+        @await Component.InvokeAsync("BannerComponent")
         <div class="title">
             <h3>最新发布</h3>
         </div>
@@ -77,7 +65,7 @@
 @section Scripts{ 
     <script type="text/javascript">
         $(function () {
-            getBanners();
+            //getBanners();
             getTopNews();
             getTotalNewsCount();
             getNewCommentNewsList();
