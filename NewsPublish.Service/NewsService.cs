@@ -7,6 +7,7 @@ using System.Text;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using AutoMapper;
 
 namespace NewsPublish.Service
 {
@@ -14,11 +15,13 @@ namespace NewsPublish.Service
     {
         private Db _db;
         private readonly NewsClassifyService _newsClassifyService;
+        private readonly IMapper _mapper;
 
-        public NewsService(Db db, NewsClassifyService newsClassifyService)
+        public NewsService(Db db, NewsClassifyService newsClassifyService,IMapper mapper)
         {
             this._db = db;
             this._newsClassifyService = newsClassifyService;
+            this._mapper = mapper;
         }
 
         /// <summary>
@@ -29,15 +32,8 @@ namespace NewsPublish.Service
             var classify = _newsClassifyService.GetOneNewsClassify(c => c.Id == addNews.NewsClassifyId);
             if (classify == null)
                 return new ResponseModel { Code = 0, Result = "该类别不存在" };
-            var n = new News
-            {
-                NewsClassifyId = addNews.NewsClassifyId,
-                Title = addNews.Title,
-                Image = addNews.Image,
-                Contents = addNews.Contents,
-                PublishDate = DateTime.Now,
-                Remark = addNews.Remark
-            };
+            var n = _mapper.Map<News>(addNews);
+            n.PublishDate = DateTime.Now;
             _db.News.Add(n);
             int i = _db.SaveChanges();
             if (i > 0)
@@ -55,7 +51,7 @@ namespace NewsPublish.Service
             {
                 Code = 200,
                 Result = "新闻获取成功",
-                Data = new NewsModel
+                Data =  new NewsModel
                 {
                     Id = news.Id,
                     ClassifyName = news.NewsClassify.Name,

@@ -11,6 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NewsPublish.Service;
+using AutoMapper;
+using System.Reflection;
 
 namespace NewsPublish.Web
 {
@@ -37,8 +39,9 @@ namespace NewsPublish.Web
             {
                 options.UseSqlServer(Configuration["Data:ConnectionString"]);
             });
-            services.AddTransient<Db>();
+            services.AddAutoMapper(Assembly.Load("NewsPublish.Service"));
 
+            services.AddTransient<Db>();
             services.AddTransient<BannerService>();
             services.AddTransient<NewsClassifyService>();
             services.AddTransient<NewsService>();

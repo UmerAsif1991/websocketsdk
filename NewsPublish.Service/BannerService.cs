@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AutoMapper;
 
 namespace NewsPublish.Service
 {
@@ -14,9 +15,12 @@ namespace NewsPublish.Service
     public class BannerService
     {
         private Db _db;
-        public BannerService(Db db)
+        private readonly IMapper _mapper;
+
+        public BannerService(Db db, IMapper mapper)
         {
             this._db = db;
+            this._mapper = mapper;
         }
 
         /// <summary>
@@ -24,7 +28,8 @@ namespace NewsPublish.Service
         /// </summary>
         public ResponseModel AddBanner(AddBanner addBanner)
         {
-            var banner = new Banner() { Image = addBanner.Image, Remark = addBanner.Remark, AddTime = DateTime.Now, Url = addBanner.Url };
+            var banner = _mapper.Map<Banner>(addBanner);
+            banner.AddTime = DateTime.Now;
             _db.Banner.Add(banner);
             int i = _db.SaveChanges();
             if (i > 0)
@@ -49,13 +54,7 @@ namespace NewsPublish.Service
             response.Data = new List<BannerModel>();
             foreach (var item in banners)
             {
-                response.Data.Add(new BannerModel()
-                {
-                    Id = item.Id,
-                    Image = item.Image,
-                    Url = item.Url,
-                    Remark = item.Remark
-                });
+                response.Data.Add(_mapper.Map<BannerModel>(item));
             }
             return response;
         }

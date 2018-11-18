@@ -72,9 +72,9 @@
                     var comments = ViewData["Comments"] as ResponseModel;
                     if (comments.Code == 200)
                     {
-                        foreach (var comment in comments.Data)
+                        foreach (CommentModel comment in comments.Data)
                         {
-                            <li class="comment-content"><span class="comment-f">@comment.Floor</span><div class="comment-main"><p><a class="address" rel="nofollow" target="_blank">匿名</a><span class="time">(@comment.AddTime)</span><br>@comment.Content</p>
+                            <li class="comment-content"><span class="comment-f">@comment.Floor</span><div class="comment-main"><p><a class="address" rel="nofollow" target="_blank">匿名</a><span class="time">(@comment.AddTime)</span><br>@comment.Contents</p>
                                   </div></li>
                         }
                     }

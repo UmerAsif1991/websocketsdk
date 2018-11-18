@@ -6,15 +6,19 @@ using System.Text;
 using System.Linq;
 using NewsPublish.Model.Entity;
 using System.Linq.Expressions;
+using AutoMapper;
 
 namespace NewsPublish.Service
 {
     public class NewsClassifyService
     {
         private Db _db;
-        public NewsClassifyService(Db db)
+        private readonly IMapper _mapper;
+
+        public NewsClassifyService(Db db,IMapper mapper)
         {
             this._db = db;
+            this._mapper = mapper;
         }
 
         /// <summary>
@@ -26,7 +30,7 @@ namespace NewsPublish.Service
             var exit = _db.NewsClassify.FirstOrDefault(c => c.Name == newsClassify.Name) != null;
             if (exit)
                 return new ResponseModel { Code = 0, Result = "该类已经存在" };
-            var classify = new NewsClassify() { Name = newsClassify.Name, Sort = newsClassify.Sort, Remark = newsClassify.Remark };
+            var classify = this._mapper.Map< NewsClassify>(newsClassify); 
             _db.NewsClassify.Add(classify);
             int i = _db.SaveChanges();
             if (i > 0)
@@ -44,11 +48,7 @@ namespace NewsPublish.Service
             if(newsClassify == null)
                 return new ResponseModel(){ Code=0,Result="该新闻类别不存在" };
 
-            return new ResponseModel() { Code = 200,Result="新闻获取成功", Data = new NewsClassifyModel() {
-                Id = newsClassify.Id,
-                Name= newsClassify.Name,
-                Sort = newsClassify.Sort,
-                Remark = newsClassify.Remark  } };
+            return new ResponseModel() { Code = 200,Result="新闻获取成功", Data = this._mapper.Map<NewsClassify>(newsClassify)};
         }
 
         /// <summary>
@@ -64,13 +64,7 @@ namespace NewsPublish.Service
             {
                 Code = 200,
                 Result = "新闻获取成功",
-                Data = new NewsClassifyModel()
-                {
-                    Id = newsClassify.Id,
-                    Name = newsClassify.Name,
-                    Sort = newsClassify.Sort,
-                    Remark = newsClassify.Remark
-                }
+                Data = this._mapper.Map<NewsClassifyModel>(newsClassify)
             };
         }
 
@@ -82,9 +76,7 @@ namespace NewsPublish.Service
             var updateNewsClassify = _db.NewsClassify.Find(editNewsClassify.Id);
             if (updateNewsClassify == null)
                 return new ResponseModel() { Code = 0, Result = "该类别不存在" };
-            updateNewsClassify.Name = editNewsClassify.Name;
-            updateNewsClassify.Sort = editNewsClassify.Sort;
-            updateNewsClassify.Remark = editNewsClassify.Remark;
+            updateNewsClassify = this._mapper.Map<NewsClassify>(editNewsClassify);
             int i = _db.SaveChanges();
             if (i > 0)
                 return new ResponseModel { Code = 200, Result = "Classify 修改成功" };
@@ -103,12 +95,7 @@ namespace NewsPublish.Service
             response.Data = new List<NewsClassifyModel>();
             foreach(var item in newsClassify)
             {
-                response.Data.Add(new NewsClassifyModel() {
-                    Id =item.Id,
-                    Name=item.Name,
-                    Sort =item.Sort,
-                    Remark =item.Remark
-                });
+                response.Data.Add(_mapper.Map<NewsClassifyModel>(item));
             }
             return response;
         }

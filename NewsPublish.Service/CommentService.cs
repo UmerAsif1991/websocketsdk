@@ -7,6 +7,7 @@ using NewsPublish.Model.Entity;
 using NewsPublish.Model.Request;
 using NewsPublish.Model.Response;
 using System.Linq;
+using AutoMapper;
 
 namespace NewsPublish.Service
 {
@@ -14,10 +15,13 @@ namespace NewsPublish.Service
     {
         private readonly Db _db;
         private readonly NewsService _newsService;
-        public CommentService(Db db, NewsService newsService)
+        private readonly IMapper _mapper;
+
+        public CommentService(Db db, NewsService newsService,IMapper mapper)
         {
             this._db = db;
             this._newsService = newsService;
+            this._mapper = mapper;
         }
 
         //添加新闻
@@ -26,12 +30,8 @@ namespace NewsPublish.Service
             var news = _newsService.GetOneNews(comment.NewsId);
             if (news.Code == 0)
                 return new ResponseModel { Code = 0, Result = "新闻不存在" };
-            var com = new NewsComment
-            {
-                AddTime = DateTime.Now,
-                NewsId = comment.NewsId,
-                Contents = comment.Contents
-            };
+            var com = this._mapper.Map<NewsComment>(comment);
+            com.AddTime = DateTime.Now;
             _db.NewsComment.Add(com);
             int i = _db.SaveChanges();
             if (i > 0)
@@ -79,17 +79,12 @@ namespace NewsPublish.Service
             response.Result = "评论获取成功！";
             response.Data = new List<CommentModel>();
             int floor = 1;
-            foreach (var comment in comments)
+            foreach (NewsComment comment in comments)
             {
-                response.Data.Add(new CommentModel
-                {
-                    Id = comment.Id,
-                    NewsName = comment.News.Title,
-                    Content = comment.Contents,
-                    AddTime = comment.AddTime,
-                    Remark = comment.Remark,
-                    Floor = "#" + floor
-                });
+                CommentModel com = _mapper.Map<CommentModel>(comment);
+                com.NewsName = comment.News.Title;
+                com.Floor = "#" + floor;
+                response.Data.Add(com);
                 floor++;
             }
 
