@@ -1,0 +1,1209 @@
+2025-08-16 22:36:59.933 +05:00 [INF] Starting up the application...
+2025-08-16 22:37:07.080 +05:00 [INF] ServerManager initialized.
+2025-08-16 22:37:07.201 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 22:37:07.925 +05:00 [INF] Executing background program...
+2025-08-16 22:37:10.689 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:37:10.691 +05:00 [INF] WebSocket connected from 182.191.74.206:48782
+2025-08-16 22:37:10.805 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:37:04","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:37:10.807 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:37:10.808 +05:00 [INF] WebSocket connected from 182.191.74.206:48782
+2025-08-16 22:37:11.366 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:37:04",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:37:19.507 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:37:19.643 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 22:37:19.653 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:37:19.654 +05:00 [INF] WebSocket connected from 182.191.74.206:48782
+2025-08-16 22:38:38.403 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:38:31","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:38:44.554 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:38:44.573 +05:00 [INF] WebSocket connected from 182.191.74.206:49540
+2025-08-16 22:38:44.607 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:38:44.608 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:38:31",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:38:47.372 +05:00 [INF] WebSocket connected from 182.191.74.206:49540
+2025-08-16 22:38:47.404 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:38:50.126 +05:00 [INF] WebSocket closed
+2025-08-16 22:38:50.128 +05:00 [INF] WebSocket closed
+2025-08-16 22:38:50.138 +05:00 [INF] WebSocket closed: "ws://223.123.92.184:7788/pub/chat"
+2025-08-16 22:38:50.284 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:38:43","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:38:50.286 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:38:50.287 +05:00 [INF] WebSocket connected from 182.191.74.206:48786
+2025-08-16 22:38:50.289 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:38:43",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:38:50.335 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:38:50.336 +05:00 [INF] WebSocket connected from 182.191.74.206:48786
+2025-08-16 22:39:08.205 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:39:08.415 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 22:39:08.421 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:39:08.422 +05:00 [INF] WebSocket connected from 182.191.74.206:48786
+2025-08-16 22:42:52.312 +05:00 [INF] WebSocket closed
+2025-08-16 22:42:52.376 +05:00 [INF] WebSocket closed: "ws://223.123.92.184:7788/pub/chat"
+2025-08-16 22:42:55.366 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:42:55.366 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:42:57.718 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:42:57.685 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:42:49","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:43:09.214 +05:00 [ERR] Error during WebSocket connection establishment: Object reference not set to an instance of an object.
+2025-08-16 22:43:09.216 +05:00 [ERR] Error during WebSocket connection establishment: Object reference not set to an instance of an object.
+2025-08-16 22:43:09.219 +05:00 [INF] WebSocket connected from 182.191.74.206:48794
+2025-08-16 22:43:14.985 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:42:58.172 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:43:16.102 +05:00 [INF] WebSocket connected from 182.191.74.206:48794
+2025-08-16 22:43:27.878 +05:00 [INF] Starting up the application...
+2025-08-16 22:43:30.661 +05:00 [INF] ServerManager initialized.
+2025-08-16 22:43:30.688 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 22:43:30.738 +05:00 [INF] Executing background program...
+2025-08-16 22:43:33.688 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:43:33.690 +05:00 [INF] WebSocket connected from 182.191.74.206:48804
+2025-08-16 22:43:33.797 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:43:27","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:43:33.799 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:43:33.800 +05:00 [INF] WebSocket connected from 182.191.74.206:48804
+2025-08-16 22:43:33.970 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:43:27",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:44:08.827 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:43:47","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:44:09.843 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:44:09.892 +05:00 [INF] WebSocket connected from 182.191.74.206:48804
+2025-08-16 22:44:09.895 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:43:47",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:45:04.286 +05:00 [INF] WebSocket closed
+2025-08-16 22:45:04.301 +05:00 [INF] WebSocket closed: "ws://223.123.92.184:7788/pub/chat"
+2025-08-16 22:45:04.386 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:45:04.388 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:44:57","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:45:04.392 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:45:04.393 +05:00 [INF] WebSocket connected from 182.191.74.206:48810
+2025-08-16 22:45:04.395 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:44:57",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:45:04.409 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:45:04.410 +05:00 [INF] WebSocket connected from 182.191.74.206:48810
+2025-08-16 22:54:06.656 +05:00 [INF] Starting up the application...
+2025-08-16 22:54:11.759 +05:00 [INF] ServerManager initialized.
+2025-08-16 22:54:11.891 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 22:54:12.176 +05:00 [INF] Executing background program...
+2025-08-16 22:54:13.314 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:54:13.317 +05:00 [INF] WebSocket connected from 182.191.74.206:49176
+2025-08-16 22:54:13.413 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:54:07","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:54:13.414 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:54:13.415 +05:00 [INF] WebSocket connected from 182.191.74.206:49176
+2025-08-16 22:54:13.567 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:54:07",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:54:18.935 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:54:19.130 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 22:54:19.139 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:54:19.140 +05:00 [INF] WebSocket connected from 182.191.74.206:49176
+2025-08-16 22:54:20.958 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:54:21.164 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 22:54:21.172 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:54:21.174 +05:00 [INF] WebSocket connected from 182.191.74.206:49176
+2025-08-16 22:57:01.779 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:57:02.122 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 22:57:02.131 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:57:02.133 +05:00 [INF] WebSocket connected from 182.191.74.206:49176
+2025-08-16 22:57:10.810 +05:00 [INF] Starting up the application...
+2025-08-16 22:57:12.976 +05:00 [INF] ServerManager initialized.
+2025-08-16 22:57:13.003 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 22:57:13.061 +05:00 [INF] Executing background program...
+2025-08-16 22:57:15.227 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:57:15.229 +05:00 [INF] WebSocket connected from 182.191.74.206:49178
+2025-08-16 22:57:15.252 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 22:57:09","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 22:57:15.259 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:57:15.261 +05:00 [INF] WebSocket connected from 182.191.74.206:49178
+2025-08-16 22:57:15.568 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 22:57:09",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 22:57:19.570 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 22:57:19.906 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 22:57:19.916 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 22:57:19.922 +05:00 [INF] WebSocket connected from 182.191.74.206:49178
+2025-08-16 23:02:14.639 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:02:54.822 +05:00 [INF] WebSocket closed
+2025-08-16 23:02:55.126 +05:00 [INF] WebSocket closed: "ws://223.123.92.184:7788/pub/chat"
+2025-08-16 23:02:55.183 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:02:49","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:02:55.186 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:02:55.187 +05:00 [INF] WebSocket connected from 182.191.74.206:49186
+2025-08-16 23:02:55.189 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:02:49",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:02:55.268 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:02:55.271 +05:00 [INF] WebSocket connected from 182.191.74.206:49186
+2025-08-16 23:02:55.367 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:02:55.367 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:02:55.370 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:15:23.011 +05:00 [INF] Starting up the application...
+2025-08-16 23:15:28.849 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:15:28.936 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:15:29.307 +05:00 [INF] Executing background program...
+2025-08-16 23:15:32.147 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:15:32.149 +05:00 [INF] WebSocket connected from 182.191.74.206:49672
+2025-08-16 23:15:32.152 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:15:26","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:15:32.153 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:15:32.154 +05:00 [INF] WebSocket connected from 182.191.74.206:49672
+2025-08-16 23:15:32.557 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:15:26",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:15:38.410 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:15:38.553 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:15:38.562 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:15:38.564 +05:00 [INF] WebSocket connected from 182.191.74.206:49672
+2025-08-16 23:15:58.626 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:15:58.827 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:15:58.836 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:15:58.837 +05:00 [INF] WebSocket connected from 182.191.74.206:49672
+2025-08-16 23:17:09.377 +05:00 [INF] Starting up the application...
+2025-08-16 23:17:11.309 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:17:11.373 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:17:11.446 +05:00 [INF] Executing background program...
+2025-08-16 23:17:14.801 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:17:14.803 +05:00 [INF] WebSocket connected from 182.191.74.206:49682
+2025-08-16 23:17:15.083 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:17:09","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:17:15.084 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:17:15.085 +05:00 [INF] WebSocket connected from 182.191.74.206:49682
+2025-08-16 23:17:15.277 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:17:09",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:17:17.835 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:17:18.133 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:17:18.143 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:17:18.144 +05:00 [INF] WebSocket connected from 182.191.74.206:49682
+2025-08-16 23:19:39.637 +05:00 [INF] Starting up the application...
+2025-08-16 23:19:41.852 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:19:41.888 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:19:41.940 +05:00 [INF] Executing background program...
+2025-08-16 23:19:42.603 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:19:42.625 +05:00 [INF] WebSocket connected from 182.191.74.206:49690
+2025-08-16 23:19:42.725 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:19:37","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:19:42.726 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:19:42.727 +05:00 [INF] WebSocket connected from 182.191.74.206:49690
+2025-08-16 23:19:42.808 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:19:37",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:19:46.278 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:19:46.353 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:19:46.362 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:19:46.364 +05:00 [INF] WebSocket connected from 182.191.74.206:49690
+2025-08-16 23:21:37.442 +05:00 [INF] Starting up the application...
+2025-08-16 23:21:39.694 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:21:39.717 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:21:39.782 +05:00 [INF] Executing background program...
+2025-08-16 23:21:42.343 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:21:36","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:21:42.345 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:21:42.346 +05:00 [INF] WebSocket connected from 182.191.74.206:49698
+2025-08-16 23:21:42.398 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:21:42.399 +05:00 [INF] WebSocket connected from 182.191.74.206:49698
+2025-08-16 23:21:42.495 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:21:36",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:23:17.860 +05:00 [INF] Starting up the application...
+2025-08-16 23:23:19.773 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:23:19.799 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:23:19.851 +05:00 [INF] Executing background program...
+2025-08-16 23:23:22.373 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:23:22.377 +05:00 [INF] WebSocket connected from 182.191.74.206:49710
+2025-08-16 23:23:22.423 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:23:16","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:23:22.424 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:23:22.425 +05:00 [INF] WebSocket connected from 182.191.74.206:49710
+2025-08-16 23:23:22.573 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:23:16",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:23:27.135 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:23:27.319 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:23:27.329 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:23:27.330 +05:00 [INF] WebSocket connected from 182.191.74.206:49710
+2025-08-16 23:24:45.529 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:24:47.794 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:24:47.803 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:24:47.804 +05:00 [INF] WebSocket connected from 182.191.74.206:49710
+2025-08-16 23:24:49.559 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:24:51.797 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:24:51.805 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:24:51.806 +05:00 [INF] WebSocket connected from 182.191.74.206:49710
+2025-08-16 23:24:56.039 +05:00 [INF] Starting up the application...
+2025-08-16 23:24:58.289 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:24:58.314 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:24:58.366 +05:00 [INF] Executing background program...
+2025-08-16 23:24:59.237 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:24:59.282 +05:00 [INF] WebSocket connected from 182.191.74.206:49716
+2025-08-16 23:24:59.282 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:24:53","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:24:59.330 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:24:59.336 +05:00 [INF] WebSocket connected from 182.191.74.206:49716
+2025-08-16 23:24:59.701 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:24:53",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:25:02.671 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:25:02.831 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:25:02.841 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:25:02.842 +05:00 [INF] WebSocket connected from 182.191.74.206:49716
+2025-08-16 23:25:59.329 +05:00 [INF] WebSocket closed
+2025-08-16 23:25:59.369 +05:00 [INF] WebSocket closed: "ws://223.123.92.184:7788/pub/chat"
+2025-08-16 23:26:02.073 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:26:02.075 +05:00 [INF] WebSocket connected from 182.191.74.206:49718
+2025-08-16 23:26:02.238 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:25:56","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:26:02.241 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:26:02.242 +05:00 [INF] WebSocket connected from 182.191.74.206:49718
+2025-08-16 23:26:02.244 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:25:56",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:31:45.649 +05:00 [INF] Starting up the application...
+2025-08-16 23:31:47.727 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:31:47.754 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:31:47.808 +05:00 [INF] Executing background program...
+2025-08-16 23:31:51.914 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:31:51.915 +05:00 [INF] WebSocket connected from 182.191.74.206:49728
+2025-08-16 23:31:51.955 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:31:46","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:31:51.956 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:31:51.961 +05:00 [INF] WebSocket connected from 182.191.74.206:49728
+2025-08-16 23:31:52.154 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:31:46",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:31:54.165 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:31:54.304 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:31:54.314 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:31:54.315 +05:00 [INF] WebSocket connected from 182.191.74.206:49728
+2025-08-16 23:33:00.350 +05:00 [INF] Starting up the application...
+2025-08-16 23:33:02.693 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:33:02.755 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:33:02.839 +05:00 [INF] Executing background program...
+2025-08-16 23:33:05.507 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:32:59","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:33:05.509 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:33:05.510 +05:00 [INF] WebSocket connected from 182.191.74.206:49736
+2025-08-16 23:33:05.561 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:33:05.562 +05:00 [INF] WebSocket connected from 182.191.74.206:49736
+2025-08-16 23:33:05.682 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:32:59",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:33:07.139 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:33:08.358 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:33:08.375 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:33:08.378 +05:00 [INF] WebSocket connected from 182.191.74.206:49736
+2025-08-16 23:34:33.449 +05:00 [INF] Starting up the application...
+2025-08-16 23:34:35.387 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:34:35.409 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:34:35.467 +05:00 [INF] Executing background program...
+2025-08-16 23:34:37.556 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:34:31","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:34:37.599 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:34:37.688 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:34:37.688 +05:00 [INF] WebSocket connected from 182.191.74.206:49744
+2025-08-16 23:34:37.689 +05:00 [INF] WebSocket connected from 182.191.74.206:49744
+2025-08-16 23:34:37.784 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:34:31",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:34:39.746 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:34:39.811 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:34:39.821 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:34:39.823 +05:00 [INF] WebSocket connected from 182.191.74.206:49744
+2025-08-16 23:42:28.909 +05:00 [INF] Starting up the application...
+2025-08-16 23:42:33.523 +05:00 [INF] ServerManager initialized.
+2025-08-16 23:42:33.595 +05:00 [INF] WebSocket server started on port 7788.
+2025-08-16 23:42:33.794 +05:00 [INF] Executing background program...
+2025-08-16 23:42:34.456 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:42:34.458 +05:00 [INF] WebSocket connected from 182.191.74.206:49762
+2025-08-16 23:42:34.489 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ13002190","devinfo":{"modelname":"TRG-AIFACE11F WIFI","manufacturer":"","usersize":15000,"facesize":5000,"fpsize":10000,"palmsize":0,"cardsize":15000,"pwdsize":15000,"logsize":500000,"useduser":8,"usedface":7,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":207,"usednewlog":15,"usedrtlog":0,"netinuse":1,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai518_fp43h_v2.12","time":"2025-08-16 23:42:28","intercom":0,"floors":48,"acces_stimes":0,"charid":1,"useosdp":0,"facetemplate":0,"dislanguage":3,"curip":"192.168.100.227","ntp":0,"timezone":"UTC+0","mac":"00-01-F5-01-A7-4D"}}
+2025-08-16 23:42:34.491 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:42:34.491 +05:00 [INF] WebSocket connected from 182.191.74.206:49762
+2025-08-16 23:42:34.646 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ13002190",
+  "devinfo": {
+    "modelname": "TRG-AIFACE11F WIFI",
+    "manufacturer": "",
+    "usersize": 15000,
+    "facesize": 5000,
+    "fpsize": 10000,
+    "palmsize": 0,
+    "cardsize": 15000,
+    "pwdsize": 15000,
+    "logsize": 500000,
+    "useduser": 8,
+    "usedface": 7,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 207,
+    "usednewlog": 15,
+    "usedrtlog": 0,
+    "netinuse": 1,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai518_fp43h_v2.12",
+    "time": "2025-08-16 23:42:28",
+    "intercom": 0,
+    "floors": 48,
+    "acces_stimes": 0,
+    "charid": 1,
+    "useosdp": 0,
+    "facetemplate": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.227",
+    "ntp": 0,
+    "timezone": "UTC+0",
+    "mac": "00-01-F5-01-A7-4D"
+  }
+}
+2025-08-16 23:42:38.265 +05:00 [INF] ------Sending command for device AYSJ13002190------: {"cmd":"getdevinfo"}
+2025-08-16 23:42:38.317 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ13002190","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":2,"time_format":1,"use_dst":1,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":2,"rfid_free_reg":0,"rfid_auto_reg":0,"shift_weekend_ot":1,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":5,"use_logphoto":2,"tts_voice":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":1,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":0,"questionnaire":0,"questionnaire_card":0,"event_schedule":0,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":1,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232261347,"netmask":4294967040,"netgateway":3232261121,"use_eth_dhcp":1,"commpassword":0,"netportnum":5005,"rs485_fun":1,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232261364,"wlan_net_mask":4294967040,"wlan_gateway":3232261121,"wlan_ssid":"The Right Guards","wlan_pwd":"42110f466","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"global.yunatt.com","use_domain_name":0,"dns_server_ip":0,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":0,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"wiegand_port":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":1,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"online_debug":0,"disable_face":0,"questionnaire_switch_card":15635642,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0,"threat":0,"access_times":0}
+2025-08-16 23:42:38.327 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:42:38.328 +05:00 [INF] WebSocket connected from 182.191.74.206:49762
+2025-08-16 23:55:53.388 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002366","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":1,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":9,"usednewlog":9,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-16 02:30:49","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.000.104","mac":"00-01-A9-02-CD-E7"}}
+2025-08-16 23:55:53.390 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:55:53.391 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:55:53.392 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002366",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 1,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 9,
+    "usednewlog": 9,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-16 02:30:49",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.000.104",
+    "mac": "00-01-A9-02-CD-E7"
+  }
+}
+2025-08-16 23:55:53.424 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:55:53.426 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:55:53.616 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:55:53.675 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:55:53.679 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:55:53.680 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:55:55.626 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:55:55.708 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:55:55.712 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:55:55.713 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:55:57.638 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:55:58.387 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:55:58.391 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:55:58.392 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:55:59.650 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:55:59.709 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:55:59.714 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:55:59.717 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:01.664 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:02.233 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:02.240 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:02.241 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:03.675 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:03.795 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:03.799 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:03.801 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:05.684 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:05.775 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:05.778 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:05.779 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:07.690 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:08.735 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:08.739 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:08.740 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:09.699 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:09.764 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:09.768 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:09.771 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:11.708 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:11.898 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:11.902 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:11.905 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:13.716 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:15.264 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:15.268 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:15.269 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:15.724 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:16.139 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:16.143 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:16.146 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:17.736 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:18.031 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:18.034 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:18.035 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:19.748 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:19.871 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:19.875 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:19.876 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:21.759 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:21.820 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:21.825 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:21.826 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:23.771 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:23.858 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:23.862 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:23.863 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:25.782 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:26.011 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:26.015 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:26.016 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:27.790 +05:00 [INF] ------Sending command for device AYSJ14002366------: {"cmd":"getdevinfo"}
+2025-08-16 23:56:28.292 +05:00 [INF] ----Ask message---- {"ret":"getdevinfo","sn":"AYSJ14002366","result":true,"deviceid":1,"language":0,"managers":10,"verifymode":0,"volume":8,"date_format":0,"time_format":1,"use_dst":0,"dst_start":117,"dst_end":309,"show_avatar":1,"show_battery":1,"use_qrcode":0,"screensavertime":60,"showresulttime":3,"sleeptime":15,"screensaver_wakeup":0,"mp4_volume":5,"stranger_photo":0,"stranger_lock":0,"verifyfail_hint":0,"userid_format":0,"solus_authentication_mode":1,"rfid_free_reg":0,"rfid_auto_reg":0,"sfz_auto_reg":0,"sfz_noverify":0,"sfz_notopen":0,"shift_weekend_ot":0,"line_notify":0,"line_push_type":0,"notify_disable":0,"filllight":0,"filllight_period":0,"accept_dose":1,"face_double_check":1,"video_clarity":1,"intercomvolume":2,"micvolume":2,"label_style":0,"glog_warning":1000,"slog_warning":100,"reverifytime":60,"use_logphoto":0,"tts_voice":1,"multifaces":1,"disable_menu":0,"reverify_nolock":0,"default_shift":1,"saturday_attend":0,"sunday_attend":0,"allow_latetime":0,"allow_earlytime":0,"auto_sign":0,"shift_weekend":0,"excel_password":"","nosavelog":0,"hide_privacy":0,"reboottime1":0,"reboottime2":0,"reboottime3":0,"selfchecklog":1,"questionnaire":0,"questionnaire_card":0,"event_schedule":1,"event_schedule1":0,"event_schedule2":0,"event_schedule3":0,"event_schedule4":0,"event_schedule5":0,"event_schedule6":0,"event_schedule7":0,"event_schedule8":0,"bellcount":0,"belloutput":0,"exposure_value":0,"live_treshold":10,"mask_treshold":50,"live_detect":1,"fcmatch_level":52,"identify_distance":2,"fpmatch_level":3,"fps_peruser":2,"usedcom":1,"combaurate":2,"netipaddress":3232236000,"netmask":4294967040,"netgateway":3232235777,"use_eth_dhcp":0,"commpassword":0,"netportnum":5005,"rs485_fun":0,"use_wlan":1,"use_wlan_dhcp":1,"wlan_ip_address":3232235624,"wlan_net_mask":4294967040,"wlan_gateway":3232235521,"wlan_ssid":"Awan_Sb","wlan_pwd":"123@123#","gprs_apn":"","gps_duration":10,"serverip":3749403832,"serverport":7788,"server_response_time":3,"user_add_enable":1,"use_bs":1,"bs_domain_name":"www.yunatt.com","use_domain_name":0,"dns_server_ip":134744072,"server_dns_name":"223.123.92.184","server_verify":0,"server_verify_timeout":5,"door_opentime":5,"door_sensor_type":0,"door_alarm_time":10,"door_firealarmin":0,"door_interlock":0,"door_mutiopen":0,"door_trycount":0,"door_tamper":0,"door_antipass":0,"multiusers":0,"door_password":0,"timezone_punchs":0,"access_denied_nolog":0,"outof_notimzone_denied":0,"elevator_control":0,"floor_number":48,"maintenance_card":0,"wiegand_output_mode":0,"wiegand_output_bit":1,"wiegand_outside_input":0,"alarm_output":0,"outwg_shot":0,"card_disp_format":0,"bio_to_card":0,"bio_verify_waiver":0,"bio_deletion":1,"cpucard_key":"12345678","wear_mask":0,"proid":0,"gprs_ipaddress":0,"gprs_macaddress":0,"rfid_module_type":0,"server_keypad":0,"bio_user_deletion":0,"qrcode_pwd":"","base_floor":0,"have_g_floor":0,"elevator_keypad":0,"card_reversal":0,"ring_style":0,"device_location":0,"keypad_pwd":0,"wg_reversal":0,"use_webserver":1,"webserverport":80,"webserver_pwd":"12345678","enable_palm":0,"palm_vein_level":0,"palm_det_level":0,"view_ir_camera":0,"online_debug":0,"disable_face":0,"local_manager_pwd":0,"questionnaire_switch_card":0,"hide_ota":0,"keyboard":0,"usegps":0,"reg_card_1":0,"reg_card_2":0,"reg_card_3":0,"use_ntp":0,"ntp_timezone":0}
+2025-08-16 23:56:28.296 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:28.297 +05:00 [INF] WebSocket connected from 202.47.63.66:30997
+2025-08-16 23:56:34.840 +05:00 [INF] WebSocket closed
+2025-08-16 23:56:34.862 +05:00 [INF] WebSocket closed: "ws://223.123.92.184:7788/pub/chat"
+2025-08-16 23:56:35.075 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002366","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":1,"usedfp":0,"usedpalm":0,"usedcard":1,"usedpwd":1,"usedlog":9,"usednewlog":9,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-16 02:31:31","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.000.104","mac":"00-01-A9-02-CD-E7"}}
+2025-08-16 23:56:35.077 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:35.078 +05:00 [INF] WebSocket connected from 202.47.63.66:30999
+2025-08-16 23:56:35.079 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002366",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 1,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 1,
+    "usedpwd": 1,
+    "usedlog": 9,
+    "usednewlog": 9,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-16 02:31:31",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.000.104",
+    "mac": "00-01-A9-02-CD-E7"
+  }
+}
+2025-08-16 23:56:35.110 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-16 23:56:35.112 +05:00 [INF] WebSocket connected from 202.47.63.66:30999

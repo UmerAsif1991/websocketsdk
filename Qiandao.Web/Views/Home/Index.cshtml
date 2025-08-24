@@ -1,0 +1,2904 @@
+﻿@{
+    ViewData["Title"] = "TRG - The Right Guards ®";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    
+    <style>
+        /* Sidebar Styles */
+        .tro-sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #2f4050;
+            color: #a7b1c2;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .tro-logo {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #405060;
+            flex-shrink: 0;
+        }
+
+        /* Scrollable container */
+        .tro-scroll-container {
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+            /* Custom scrollbar */
+            .tro-scroll-container::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .tro-scroll-container::-webkit-scrollbar-thumb {
+                background-color: #4a5b6d;
+                border-radius: 3px;
+            }
+
+            .tro-scroll-container::-webkit-scrollbar-track {
+                background-color: #2f4050;
+            }
+
+        /* Menu and List Styles */
+        .tro-menu {
+            padding: 10px 0;
+            flex-shrink: 0;
+        }
+
+        .tro-function-list {
+            padding: 10px 0;
+            border-top: 1px solid #405060;
+            flex-grow: 1;
+        }
+
+        /* Rest of your existing styles for menu items and list items */
+        .tro-menu-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+            .tro-menu-item:hover {
+                background-color: #293846;
+                color: #fff;
+            }
+
+            .tro-menu-item.active {
+                background-color: #293846;
+                color: #fff;
+                border-left: 3px solid #19a97b;
+            }
+
+            .tro-menu-item i {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+        .tro-menu-section {
+            padding-left: 20px;
+            border-left: 1px solid #405060;
+            margin: 5px 0 5px 15px;
+        }
+
+            .tro-menu-section .tro-menu-item {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+
+        .tro-function-list {
+            list-style: none;
+            padding: 0 15px;
+        }
+
+            .tro-function-list li {
+                padding: 8px 15px;
+                margin-bottom: 5px;
+                cursor: pointer;
+                color: #a7b1c2;
+                border-radius: 3px;
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+            }
+
+                .tro-function-list li:hover {
+                    background-color: #293846;
+                    color: #fff;
+                }
+
+                .tro-function-list li span {
+                    flex-grow: 1;
+                }
+
+        .tro-list-header {
+            color: #a7b1c2 !important;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            padding-left: 5px !important;
+            cursor: default !important;
+            background-color: transparent !important;
+        }
+
+            .tro-list-header i {
+                margin-right: 8px;
+            }
+
+        .tro-function-list li:not(.tro-list-header) {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+            .tro-function-list li:not(.tro-list-header):hover {
+                background-color: #19a97b;
+            }
+
+        .tro-logo {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #405060;
+        }
+
+        .tro-menu {
+            margin-top: 20px;
+        }
+
+        .tro-menu-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+            .tro-menu-item:hover {
+                background-color: #293846;
+                color: #fff;
+            }
+
+            .tro-menu-item.active {
+                background-color: #293846;
+                color: #fff;
+                border-left: 3px solid #19a97b;
+            }
+
+            .tro-menu-item i {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+        .tro-menu-section {
+            padding-left: 20px;
+            border-left: 1px solid #405060;
+            margin: 5px 0 5px 15px;
+        }
+
+            .tro-menu-section .tro-menu-item {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+
+        /* Content Styles */
+        .tro-content {
+            margin-left: 220px;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: #f3f3f4;
+        }
+
+        .tro-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .tro-user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tro-section {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .tro-section-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tro-section-body {
+            padding: 20px;
+        }
+        .tro-header {
+            background-color: #1E88E5;
+            color: white;
+            padding: 0 20px;
+            height: 60px;
+            line-height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .tro-logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .tro-nav {
+            margin-left: 30px;
+        }
+
+            .tro-nav a {
+                color: white;
+                padding: 0 15px;
+                font-size: 16px;
+            }
+
+                .tro-nav a:hover {
+                    color: #BBDEFB;
+                }
+
+        .tro-breadcrumb {
+            padding: 15px 0;
+            font-size: 14px;
+        }
+
+        .tro-section {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .tro-section-header {
+            border-bottom: 1px solid #eee;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .tro-section-body {
+            padding: 20px;
+        }
+
+        .tro-checkbox-list {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tro-checkbox-item {
+            margin-right: 20px;
+        }
+
+        .tro-form-filter {
+            margin-bottom: 20px;
+        }
+
+        .tro-add-btn {
+            margin-bottom: 15px;
+        }
+
+        .tro-table-container {
+            overflow-x: auto;
+        }
+
+        /* Function List Styles */
+        .tro-function-list {
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 1px solid #405060;
+            list-style: none;
+        }
+
+            .tro-function-list li {
+                padding: 8px 15px;
+                margin-bottom: 5px;
+                cursor: pointer;
+                color: #a7b1c2;
+                border-radius: 3px;
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+            }
+
+                .tro-function-list li:hover {
+                    background-color: #293846;
+                    color: #fff;
+                }
+
+                .tro-function-list li span {
+                    flex-grow: 1;
+                }
+
+        .tro-list-header {
+            color: #a7b1c2 !important;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            padding-left: 5px !important;
+            cursor: default !important;
+            background-color: transparent !important;
+        }
+
+            .tro-list-header i {
+                margin-right: 8px;
+            }
+
+        /* Make sure the clickable items look interactive */
+        .tro-function-list li:not(.tro-list-header) {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+            .tro-function-list li:not(.tro-list-header):hover {
+                background-color: #19a97b;
+            }
+    </style>
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <div class="tro-sidebar">
+        <div class="tro-logo">TRG - The Right Guards ®</div>
+
+        <!-- Function Buttons Section as List Items -->
+        <ul class="tro-function-list">
+            <!-- User Management Section -->
+            <li class="tro-list-header collapsible">
+                <i class="layui-icon layui-icon-user"></i>
+                <span>User Management</span>
+                <i class="layui-icon layui-icon-down collapse-icon"></i>
+            </li>
+            <div class="collapsible-content show">
+            <li id="collectList_emp_modal_btn"><span>Get Users List</span></li>
+            <li id="collectInfo_emp_modal_btn"><span>Get Users Info</span></li>
+            <li id="addUser_modal_btn"><span>Add User Classic</span></li>
+            <li id="collectList_emp_modal_remote_btn"><span>Add Remote User</span></li>
+            <li id="setUserName_modal_btn"><span>Set User Name</span></li>
+            <li id="setUserToDevice_emp_modal_btn"><span>Set User </span></li>
+             </div>
+
+    <!-- Access Control Section -->
+    <li class="tro-list-header collapsible">
+        <i class="layui-icon layui-icon-auz"></i>
+        <span>Access Control</span>
+        <i class="layui-icon layui-icon-down collapse-icon"></i>
+    </li>
+    <div class="collapsible-content show">
+        <li id="accessWeek_emp_modal_btn"><span>Set Access Week</span></li>
+        <li id="accessDay_emp_modal_btn"><span>Set Access Day</span></li>
+        <li id="lockGroup_emp_modal_btn"><span>Set Lock Group</span></li>
+        <li id="authorize_emp_modal_btn"><span>Authorize</span></li>
+    </div>
+
+    <!-- Device Control Section -->
+    <li class="tro-list-header collapsible">
+        <i class="layui-icon layui-icon-component"></i>
+        <span>Device Control</span>
+        <i class="layui-icon layui-icon-down collapse-icon"></i>
+    </li>
+    <div class="collapsible-content show">
+        <li id="getDeviceInfo_modal_btn"><span>Get Device Info</span></li>
+        <li id="openDoor_modal_btn"><span>Open Door</span></li>
+        <li id="getDevLock_modal_btn"><span>Get DevLock</span></li>
+        <li id="getUserLock_modal_btn"><span>Get User Lock</span></li>
+    </div>
+
+    <!-- System Section -->
+    <li class="tro-list-header collapsible">
+        <i class="layui-icon layui-icon-engine"></i>
+        <span>System</span>
+        <i class="layui-icon layui-icon-down collapse-icon"></i>
+    </li>
+    <div class="collapsible-content show">
+        <li id="initSys_emp_modal_btn"><span>Remove All Users And Logs</span></li>
+        <li id="cleanAdmin_modal_btn"><span>Clean Admin</span></li>
+        <li id="synchronize_Time"><span>Set Device Time</span></li>
+    </div>
+
+    <!-- Data Section -->
+    <li class="tro-list-header collapsible">
+        <i class="layui-icon layui-icon-template"></i>
+        <span>Data</span>
+        <i class="layui-icon layui-icon-down collapse-icon"></i>
+    </li>
+    <div class="collapsible-content show">
+        <li id="logInfo_emp_modal_btn"><span>Log Record</span></li>
+        <li id="download_emp_modal_btn"><span>download Select Message</span></li>
+    </div>
+    </ul>
+    </div>
+   
+
+
+    <style>
+        /* Collapsible styles */
+        .collapsible {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .collapsible-content {
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+            .collapsible-content.show {
+                max-height: 500px; /* Adjust based on your content */
+            }
+
+            .collapsible-content.hidden {
+                max-height: 0;
+            }
+
+        .collapse-icon {
+            position: absolute;
+            right: 15px;
+            transition: transform 0.2s ease;
+        }
+
+        .collapsible.active .collapse-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Rest of your existing sidebar styles */
+        .tro-sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #2f4050;
+            color: #a7b1c2;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .tro-logo {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #405060;
+            flex-shrink: 0;
+        }
+
+        .tro-function-list {
+            padding: 10px 0;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .tro-list-header {
+            padding: 12px 20px;
+            color: #a7b1c2;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+            .tro-list-header i:first-child {
+                margin-right: 10px;
+            }
+
+        .tro-function-list li:not(.tro-list-header) {
+            padding: 8px 20px 8px 40px;
+            cursor: pointer;
+            color: #a7b1c2;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+            .tro-function-list li:not(.tro-list-header):hover {
+                background-color: #19a97b;
+                color: #fff;
+            }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const collapsibles = document.querySelectorAll('.collapsible');
+
+            collapsibles.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('show');
+                    content.classList.toggle('hidden');
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* ===== Base Structure ===== */
+        .tro-sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #2f4050;
+            color: #a7b1c2;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .tro-content {
+            margin-left: 220px;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: #f3f3f4;
+        }
+
+        /* ===== Logo Styles ===== */
+        .tro-logo {
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #405060;
+            flex-shrink: 0;
+        }
+
+        /* ===== Scrollable Container ===== */
+        .tro-scroll-container {
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .tro-scroll-container::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .tro-scroll-container::-webkit-scrollbar-thumb {
+                background-color: #4a5b6d;
+                border-radius: 3px;
+            }
+
+            .tro-scroll-container::-webkit-scrollbar-track {
+                background-color: #2f4050;
+            }
+
+        /* ===== Main Menu Styles ===== */
+        .tro-menu {
+            padding: 10px 0;
+            margin-top: 20px;
+            flex-shrink: 0;
+        }
+
+        .tro-menu-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+            .tro-menu-item:hover {
+                background-color: #293846;
+                color: #fff;
+            }
+
+            .tro-menu-item.active {
+                background-color: #293846;
+                color: #fff;
+                border-left: 3px solid #19a97b;
+            }
+
+            .tro-menu-item i {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+        .tro-menu-section {
+            padding-left: 20px;
+            border-left: 1px solid #405060;
+            margin: 5px 0 5px 15px;
+        }
+
+            .tro-menu-section .tro-menu-item {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+
+        /* ===== Function List Styles ===== */
+        .tro-function-list {
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 1px solid #405060;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+            .tro-function-list li {
+                padding: 8px 15px;
+                margin-bottom: 5px;
+                cursor: pointer;
+                color: #a7b1c2;
+                border-radius: 3px;
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+                background-color: rgba(255,255,255,0.05);
+            }
+
+                .tro-function-list li:hover {
+                    background-color: #19a97b;
+                    color: #fff;
+                }
+
+                .tro-function-list li span {
+                    flex-grow: 1;
+                }
+
+        .tro-list-header {
+            color: #a7b1c2 !important;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            padding-left: 5px !important;
+            cursor: default !important;
+            background-color: transparent !important;
+        }
+
+            .tro-list-header i {
+                margin-right: 8px;
+            }
+
+        /* ===== Content Area Styles ===== */
+        .tro-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 20px;
+            height: 60px;
+            line-height: 60px;
+            margin-bottom: 20px;
+            background-color: #19a97b;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .tro-user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tro-nav {
+            margin-left: 30px;
+        }
+
+            .tro-nav a {
+                color: white;
+                padding: 0 15px;
+                font-size: 16px;
+            }
+
+                .tro-nav a:hover {
+                    color: #BBDEFB;
+                }
+
+        .tro-section {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .tro-section-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tro-section-body {
+            padding: 20px;
+        }
+
+        /* ===== Utility Styles ===== */
+        .tro-breadcrumb {
+            padding: 15px 0;
+            font-size: 14px;
+        }
+
+        .tro-checkbox-list {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tro-checkbox-item {
+            margin-right: 20px;
+        }
+
+        .tro-form-filter {
+            margin-bottom: 20px;
+        }
+
+        .tro-add-btn {
+            margin-bottom: 15px;
+        }
+
+        .tro-table-container {
+            overflow-x: auto;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const collapsibles = document.querySelectorAll('.collapsible');
+
+            collapsibles.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('show');
+                    content.classList.toggle('hidden');
+                });
+            });
+        });
+    </script>
+    <!-- Main Content -->
+    <div class="tro-content">
+        <!-- Header -->
+        <div class="tro-header">
+            <div class="tro-user-info">
+                <span>Welcome, Admin</span>
+                <i class="layui-icon layui-icon-logout"></i>
+            </div>
+        </div>
+
+        <!-- Device Management Section (Main Content) -->
+        <div class="tro-section">
+            <div class="tro-section-header">
+                <i class="layui-icon layui-icon-component"></i> Device Management
+            </div>
+               <button id="refreshDevicesBtn" class="layui-btn layui-btn-normal" style="margin-right: 20px;">
+        <i class="layui-icon layui-icon-refresh"></i> Refresh
+    </button>
+            <div class="tro-section-body">
+                <!-- Device Table -->
+                <table class="layui-hide" id="Devices" lay-filter="Devices"></table>
+            </div>
+
+            
+        </div>
+
+        <div class="tro-section">
+            <div class="tro-section-header">
+                <i class="layui-icon layui-icon-component"></i> Users Management
+            </div>
+            <div class="tro-section-body">
+                <!-- Device Table -->
+                <table class="layui-hide" id="test" lay-filter="test"></table>
+            </div>
+
+
+        </div>
+    </div>
+
+    
+    
+   
+
+    <script>
+document.getElementById('refreshDevicesBtn').addEventListener('click', function() {
+    location.reload(); // This will reload the entire page
+})
+
+
+                   layui.$('#setRemoteUserToDevice_emp_modal_btn2').click(function() {
+                var table = layui.table;
+                var checkStatus = table.checkStatus('test');
+                var selectedRows = checkStatus.data;
+
+                if (selectedRows.length === 0) {
+                    layer.msg('Please select at least one row.');
+                    return false;
+                }
+
+                var deviceSn = layui.$('#deviceid').val();
+
+                selectedRows.forEach(function(row) {
+                    var queryParams = `deviceSn=${encodeURIComponent(deviceSn)}&EnrolId=${encodeURIComponent(row.enrollId)}&Name=${encodeURIComponent(row.name)}`;
+
+                    layui.$.ajax({
+                        url: `/api/setRemotePersonToDevice?${queryParams}`,
+                        type: 'POST',
+                        success: function(result) {
+                            layer.msg(result.msg);
+                        },
+                        error: function(xhr) {
+                            layer.msg('Error: ' + (xhr.responseJSON?.msg || 'Server error'));
+                        }
+                    });
+                });
+            });
+
+                function getCheckedDevices() {
+                // Get the table instance (assuming your table has the ID or filter specified)
+                var table = layui.table;
+                var checkStatus = table.checkStatus('test'); // 'test' is your table's lay-filter value
+
+                // checkStatus.data contains the selected rows' data
+                if (checkStatus.data.length === 0) {
+                    layer.msg('Please select at least one row');
+                    return false;
+                }
+
+                // Process each selected row
+                var selectedUsers = [];
+                checkStatus.data.forEach(function(row) {
+                    selectedUsers.push({
+                        EnrollId: row.enrollId,
+                        Name: row.name,
+                        Admin: row.admin,
+                        ImagePath: row.imgUrl
+                    });
+                });
+
+                // Return or use the selected data
+                console.log(selectedUsers);
+                return selectedUsers;
+            }
+
+
+
+
+
+
+            layui.use(['table', 'jquery'], function() {
+            var table = layui.table;
+            var $ = layui.$;
+
+            // Function to load data from API and render it in the table
+            function loadDevices() {
+                $.ajax({
+                    url: '/api/loaddevices',  // Replace with your API endpoint
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response && response.data) {
+                            let rm = response.data.allDevices; // All devices list (from rm)
+                            let rmActive = response.data.activeDevices; // Active devices list (from rmActive)
+
+                            // Loop through all devices in rm
+                            rm.forEach(function(device) {
+                                // Check if the device's serial_num exists in the 'rmActive' array
+                                let isActive = rmActive.some(function(activeDevice) {
+                                    return activeDevice.serial_num === device.serial_num;
+                                });
+
+                                // If the serial_num exists in rmActive, set status to Active, otherwise Inactive
+                                device.Status = isActive ? 'Active' : 'Inactive';
+                            });
+
+                            // Render the table with the fetched data
+                            table.render({
+                                elem: '#Devices',
+                                data: rm,  // Assuming 'rm' contains the updated data
+                                page: true,  // Enable pagination
+                                limit: 10,  // Set the default page size
+                                cols: 
+                                [[
+                                    {type: 'radio', fixed: 'left'},
+                                    {field: 'id', title: 'Device ID', width: 150},
+                                    {field: 'deviceName', title: 'Device Name', width: 200},
+                                    {field: 'serial_num', title: 'Serial Number', width: 200},
+                                    {
+                                        field: 'Status',
+                                        title: 'Status',
+                                        width: 120,
+                                        templet: function(d) {
+                                            if (d.Status === 'Active') {
+                                                return '<span style="color: green; font-weight: bold;">Active</span>';
+                                            } else if (d.Status === 'Inactive') {
+                                                return '<span style="color: red; font-weight: bold;">Inactive</span>';
+                                            }
+                                            return d.Status || '';
+                                        }
+                                    },
+                                    {fixed: 'right', title: 'Actions', toolbar: '#deviceToolbar', width: 150}
+                                ]],
+                                done: function(res, curr, count) {
+                                    const tableView = document.querySelector('[lay-id="Devices"]');
+                                    if (!tableView) return;
+
+                                    const rows = tableView.querySelectorAll('.layui-table-body tr');
+                                    console.log("Rows rendered:", rows.length);
+
+
+                                    rows.forEach(function(row) {
+                                        
+                                        const status = statusCell.innerText.trim();
+                                        if (status === 'Active') {
+                                            row.style.backgroundColor = 'green';  // Green for Active
+                                            row.style.color = 'white';            // Text white for visibility
+                                        } else if (status === 'Inactive') {
+                                            row.style.backgroundColor = 'red';    // Red for Inactive
+                                            row.style.color = 'white';            // Text white for visibility
+                                        } else {
+                                            row.style.backgroundColor = '';       // Default background for others
+                                            row.style.color = '';                 // Reset text color
+                                        }
+                                    });
+
+                                    console.log("Table rendered successfully!");
+                                }
+                            });
+                        } else {
+                            layer.msg('Failed to load devices!');
+                        }
+                    },
+                    error: function() {
+                        layer.msg('Error occurred while fetching devices.');
+                    }
+                });
+            }
+
+
+
+
+
+
+            // Call the function to load data when the page is ready
+            loadDevices();
+        });
+
+
+            function initOption(form){
+                layui.$.ajax({
+                    url: '/api/device',
+                    dataType: 'json',
+                    type: 'get',
+                    async: false,
+                    success: function (data) {
+                        layui.$.each(data.data, function (index, item) {
+                            console.log("item="+item)
+                            var option = new Option(item.serial_num, item.serial_num);
+                            layui.$('#deviceid').append(option);// 下拉菜单里添加元素
+                        });
+                        form.render("select");
+                    }
+                })
+            }
+
+            function setDayOption(result,form){
+                layui.$('#sunday_id').empty();
+                layui.$('#monday_id').empty();
+                layui.$('#tuesday_id').empty();
+                layui.$('#wednesday_id').empty();
+                layui.$('#thursday_id').empty();
+                layui.$('#friday_id').empty();
+                layui.$('#saturday_id').empty();
+                layui.$('#sunday_id').append(new Option('Please select', ''));// 下拉菜单里添加元素
+                layui.$('#monday_id').append(new Option('Please select', ''));
+                layui.$('#tuesday_id').append(new Option('Please select', ''));
+                layui.$('#wednesday_id').append(new Option('Please select', ''));
+                layui.$('#thursday_id').append(new Option('Please select', ''));
+                layui.$('#friday_id').append(new Option('Please select', ''));
+                layui.$('#saturday_id').append(new Option('Please select', ''));
+
+                layui.$.each(result.accessdays,function(index, item){
+                    layui.$('#sunday_id').append(new Option(item.name, item.id));// 下拉菜单里添加元素
+                    layui.$('#monday_id').append(new Option(item.name, item.id));
+                    layui.$('#tuesday_id').append(new Option(item.name, item.id));
+                    layui.$('#wednesday_id').append(new Option(item.name, item.id));
+                    layui.$('#thursday_id').append(new Option(item.name, item.id));
+                    layui.$('#friday_id').append(new Option(item.name, item.id));
+                    layui.$('#saturday_id').append(new Option(item.name, item.id));
+                });
+
+                form.render('select');
+            }
+            layui.use(['table', 'dropdown'], function(){
+                var table = layui.table;
+                var form = layui.form;
+                var laydate = layui.laydate;
+                var dropdown = layui.dropdown;
+                form.verify({
+                    required: function(value, item){
+                        if(value.trim() === ''){
+                            return 'Required fields cannot be empty'; // 获取对应字段的label文本作为提示语
+                        }
+                    }
+                });
+
+                // 创建渲染实例
+                table.render({
+                    elem: '#test',
+                    url: '/api/emps', // 此处为静态模拟数据，实际使用时需换成真实接口
+                    toolbar: '#toolbarDemo',
+                    defaultToolbar: [],
+                    // height: 'full-35', // 最大高度减去其他容器已占有的高度差
+                    css: [ // 重设当前表格样式
+                        '.layui-table-tool-temp{padding-right: 145px;}'
+                    ].join(''),
+                    cellMinWidth: 80,
+                    lineStyle: 'height: 60px;',
+
+                    // totalRow: true, // 开启合计行
+                    page: {
+                        layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                        limits: [10,20, 50, 100], // 自定义每页显示条数的选项
+                        limit: 10, // 每页默认显示条数
+                        prev: 'Previous',
+                        next: 'Next',
+                        count: 'Total: {{count}}',
+                    },
+                    cols: [[
+                        {type: 'checkbox', fixed: 'left'},
+                        {field:'enrollId', fixed: 'left',  title: 'EnrollId',width:100},
+                        {field:'name', title: 'Name',width:200},
+                        {
+                            field: 'admin',
+                            title: 'Level',
+                            templet:"#roletmp",width:120
+                        },
+                        {
+                            field: 'imgUrl',
+                            title: 'Photo',
+                            templet:"#imgtmp",width:100
+                        },
+                        {fixed: 'right', title:'Operation', toolbar: '#barDemo'}
+                    ]],
+                    done: function(){
+                        initOption(form)
+                        var id = this.id;
+                        // 下拉按钮测试
+                        dropdown.render({
+                            elem: '#dropdownButton', // 可绑定在任意元素中，此处以上述按钮为例
+                            data: [{
+                                id: 'add',
+                                title: '添加'
+                            },{
+                                id: 'update',
+                                title: '编辑'
+                            },{
+                                id: 'delete',
+                                title: '删除'
+                            }],
+                            // 菜单被点击的事件
+                            click: function(obj){
+                                var checkStatus = table.checkStatus(id)
+                                var data = checkStatus.data; // 获取选中的数据
+                                switch(obj.id){
+                                    case 'add':
+                                        layer.open({
+                                            title: '添加',
+                                            type: 1,
+                                            area: ['60%','80%'],
+                                            content: layui.$('#addForm')
+                                        });
+                                        break;
+                                    case 'update':
+                                        if(data.length !== 1) return layer.msg('Please select一行');
+                                        layer.open({
+                                            title: '编辑',
+                                            type: 1,
+                                            area: ['80%','80%'],
+                                            content: '<div style="padding: 16px;">自定义表单元素</div>'
+                                        });
+                                        break;
+                                    case 'delete':
+                                        if(data.length === 0){
+                                            return layer.msg('Please select一行');
+                                        }
+                                        layer.msg('delete event');
+                                        break;
+                                }
+                            }
+                        });
+
+                        // 重载测试
+                        dropdown.render({
+                            elem: '#reloadTest', // 可绑定在任意元素中，此处以上述按钮为例
+                            data: [{
+                                id: 'reload',
+                                title: '重载'
+                            },{
+                                id: 'reload-deep',
+                                title: '重载 - 参数叠加'
+                            },{
+                                id: 'reloadData',
+                                title: '仅重载数据'
+                            },{
+                                id: 'reloadData-deep',
+                                title: '仅重载数据 - 参数叠加'
+                            }],
+                            // 菜单被点击的事件
+                            click: function(obj){
+                                switch(obj.id){
+                                    case 'reload':
+                                        // 重载 - 默认（参数重置）
+                                        table.reload('test', {
+                                            where: {
+                                                abc: '123456',
+                                            },
+                                        });
+                                        break;
+                                    case 'reload-deep':
+                                        // 重载 - 深度（参数叠加）
+                                        table.reload('test', {
+                                            where: {
+                                                abc: 123,
+                                                test: '新的 test1'
+                                            },
+                                        }, true);
+                                        break;
+                                    case 'reloadData':
+                                        // 数据重载 - 参数重置
+                                        table.reloadData('test', {
+                                            where: {
+                                                abc: '123456',
+                                            },
+                                            scrollPos: 'fixed',  // 保持滚动条位置不变 - v2.7.3 新增
+                                            height: 2000, // 测试无效参数（即与数据无关的参数设置无效，此处以 height 设置无效为例）
+                                        });
+                                        break;
+                                    case 'reloadData-deep':
+                                        // 数据重载 - 参数叠加
+                                        table.reloadData('test', {
+                                            where: {
+                                                abc: 123,
+                                                test: '新的 test1'
+                                            }
+                                        }, true);
+                                        break;
+                                }
+                                layer.msg('可观察 Network 请求参数的变化');
+                            }
+                        });
+
+                        // 行模式
+                        dropdown.render({
+                            elem: '#rowMode',
+                            data: [{
+                                id: 'default-row',
+                                title: '单行模式（默认）'
+                            },{
+                                id: 'multi-row',
+                                title: '多行模式'
+                            }],
+                            // 菜单被点击的事件
+                            click: function(obj){
+                                var checkStatus = table.checkStatus(id)
+                                var data = checkStatus.data; // 获取选中的数据
+                                switch(obj.id){
+                                    case 'default-row':
+                                        table.reload('test', {
+                                            lineStyle: null // 恢复单行
+                                        });
+                                        layer.msg('已设为单行');
+                                        break;
+                                    case 'multi-row':
+                                        table.reload('test', {
+                                            // 设置行样式，此处以设置多行高度为例。若为单行，则没必要设置改参数 - 注：v2.7.0 新增
+                                            lineStyle: 'height: 95px;'
+                                        });
+                                        layer.msg('即通过设置 lineStyle 参数可开启多行');
+                                        break;
+                                }
+                            }
+                        });
+                    },
+                    error: function(res, msg){
+                        console.log(res, msg)
+                    }
+                });
+                // 日期
+                laydate.render({
+                    elem: '.demo-table-search-date'
+                });
+                laydate.render({
+                    elem: '#starttime',
+                });
+                laydate.render({
+                    elem: '#endtime',
+                });
+                laydate.render({
+                    elem: '#endTime1',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#endTime2',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#endTime3',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#endTime4',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#endTime5',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#startTime1',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#startTime2',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#startTime3',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#startTime4',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#startTime5',
+                    type: 'time',
+                    format: 'HH:mm'
+                });
+
+                form.on('select(accessWeek_form_id_filter)', function(data){
+                    var value = data.value;
+                    layui.$.ajax({
+                        url:'/api/accessDays',
+                        type:"GET",
+                        success:function(result){
+                            setDayOption(result,form)
+                        }
+                    });
+                    setTimeout(function(){
+                         var value = data.value;
+                       layui.$.ajax({
+                        url:'/api/accessWeek?id=' + value,
+                        type:"GET",
+                        success:function(result){
+                             layui.$('#week_name').val(result.accessweek.name);
+                             layui.$('#sunday_id').val(result.accessweek.sunday);
+                layui.$('#monday_id').val(result.accessweek.monday);
+                layui.$('#tuesday_id').val(result.accessweek.tuesday);
+                layui.$('#wednesday_id').val(result.accessweek.wednesday);
+                layui.$('#thursday_id').val(result.accessweek.thursday);
+                layui.$('#friday_id').val(result.accessweek.friday);
+                layui.$('#saturday_id').val(result.accessweek.saturday);
+                        }
+                    });
+                    },200);
+                });
+
+
+                form.on('select(accessDay_form_id_filter)', function(data){
+                    var value = data.value; // 获得被选中的值
+                    layui.$.ajax({
+                        url:'/api/accessDays',
+                        type:"GET",
+                        success:function(result){
+                            console.log(result.accessdays.length)
+                            var flag =false
+                            layui.$.each(result.accessdays,function(){
+
+                                if(this.id==value){
+                                    flag=true
+                                    layui.$('#day_name').val(this.name)
+                                    layui.$('#day_serial').val(this.serial)
+                                    layui.$('#startTime1').val(this.start_time1)
+                                    layui.$('#endTime1').val(this.end_time1)
+
+                                    layui.$('#startTime2').val(this.start_time2)
+                                    layui.$('#endTime2').val(this.end_time2)
+
+                                    layui.$('#startTime3').val(this.start_time3)
+                                    layui.$('#endTime3').val(this.end_time3)
+
+                                    layui.$('#startTime4').val(this.start_time4)
+                                    layui.$('#endTime4').val(this.end_time4)
+
+                                    layui.$('#startTime5').val(this.start_time5)
+                                    layui.$('#endTime5').val(this.end_time5)
+
+                                }
+                            });
+                            if(!flag){
+                                layui.$('#day_name').val()
+                                layui.$('#day_serial').val()
+                                layui.$('#startTime1').val()
+                                layui.$('#endTime1').val()
+
+                                layui.$('#startTime2').val()
+                                layui.$('#endTime2').val()
+
+                                layui.$('#startTime3').val()
+                                layui.$('#endTime3').val()
+
+                                layui.$('#startTime4').val()
+                                layui.$('#endTime4').val()
+
+                                layui.$('#startTime5').val()
+                                layui.$('#endTime5').val()
+
+                            }
+
+                        }
+                    });
+                });
+                form.on('submit(accessWeek_form_submit)',function (data) {
+                    // 将数据序列化为 JSON 格式
+                    var jsonData = JSON.stringify(data.field);
+                    var deviceSn = layui.$('#deviceid').val()
+                    layui.$.ajax({
+                        url: '/api/setAccessWeek?deviceSn=' + deviceSn,
+                        type:"POST",
+                        contentType: 'application/json', // 设置 Content-Type 为 application/json
+                        data: jsonData,
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(accessDay_form_submit)',function (data) {
+                    // 将数据序列化为 JSON 格式
+                    var jsonData = JSON.stringify(data.field);
+                    var deviceSn = layui.$('#deviceid').val()
+                    layui.$.ajax({
+                        url: '/api/setAccessDay?deviceSn=' + deviceSn,
+                        type:"POST",
+                        contentType: 'application/json', // 设置 Content-Type 为 application/json
+                        data: jsonData,
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(form-add-person)',function (data) {
+                    var formData = new FormData();
+                    formData.append('pic', data.form[4].files[0]);
+                    formData.append('CardNum', data.field.cardNum);
+                    formData.append('Name', data.field.name);
+                    formData.append('Password', data.field.password);
+                    formData.append('Privilege', data.field.privilege);
+                    formData.append('UserId', data.field.userId);
+                    layui.$.ajax({
+                        url:'/api/addPerson',
+                        type:"POST",
+                        data:formData,
+                        processData: false, // 不进行数据处理
+                        contentType: false,
+                        success:function(result){
+                            layer.msg(result.msg);
+                            //回到当前页
+                            layer.closeAll('page');
+                            // 执行搜索重载
+                            table.reload('test', {
+                                page: {
+                                    layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                                    limits: [15, 30, 50, 100], // 自定义每页显示条数的选项
+                                    limit: 15, // 每页默认显示条数
+                                    prev: 'Previous',
+                                    next: 'Next',
+                                    count: 'Total: {{count}}',
+                                    curr: 1 // 重新从第 1 页开始
+                                },
+                            });
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(lockGroup_form_submit)',function (data) {
+                    var jsonData = JSON.stringify(data.field);
+                    var deviceSn = layui.$('#deviceid').val()
+                    layui.$.ajax({
+                        url: '/api/setLocckGroup?deviceSn=' + deviceSn,
+                        type:"POST",
+                        contentType: 'application/json', // 设置 Content-Type 为 application/json
+                        data: jsonData,
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(openDoor_form_submit)',function (data) {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layui.$.ajax({
+                        url:'/api/openDoor?doorNum='+data.field.doorNum+"&deviceSn="+deviceSn,
+                        type:"GET",
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(getUserLock_form_submit)',function (data) {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layui.$.ajax({
+                        url:'/api/geUSerLock?enrollId='+data.field.enrollId+"&deviceSn="+deviceSn,
+                        type:"GET",
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(setUserLock_form_submit)',function (data) {
+                    var jsonData = JSON.stringify(data.field);
+                    var deviceSn = layui.$('#deviceid').val()
+                    layui.$.ajax({
+                        url: '/api/setUserLock?deviceSn='+deviceSn,
+                        type:"POST",
+                        contentType: 'application/json', // 设置 Content-Type 为 application/json
+                        data: jsonData,
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(downloadOnePerson_form_submit)',function (data) {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    console.log(data.field)
+                    layui.$.ajax({
+                        url:'/api/sendGetUserInfo?enrollId='+data.field.enrollId+'&backupNum='+data.field.backupNum+"&deviceSn="+deviceSn,
+                        type:"GET",
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+                form.on('submit(uploadOneUser_form_submit)',function (data) {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layui.$.ajax({
+                        url:'/api/setOneUser?enrollId='+data.field.enrollId+'&backupNum='+data.field.backupNum+"&deviceSn="+deviceSn,
+                        type:"GET",
+                        success:function(result){
+                            layer.msg(result.msg);
+                            // 关闭当前弹框页面
+                            layer.closeAll('page');
+                        }
+                    });
+                    return false; // 阻止默认 form 跳转
+                })
+
+                // 搜索提交
+                form.on('submit(demo-table-search)', function(data){
+                  //  var field = data.field; // 获得表单字段
+                    var name = layui.$('#deviceid').val()
+
+                    // 执行搜索重载
+                    table.reload('test', {
+                        page: {
+                            layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                            limits: [15, 30, 50, 100], // 自定义每页显示条数的选项
+                            limit: 15, // 每页默认显示条数
+                            prev: 'Previous',
+                            next: 'Next',
+                            count: 'Total: {{count}}',
+                            curr: 1 // 重新从第 1 页开始
+                        },
+                        where: {
+                          //  field: field, // 搜索的字段
+                            name: name // 添加 name 参数
+                        }
+                    });
+                    layui.$('#deviceid').val(name)
+                    // layer.msg('搜索成功<br>此处为静态模拟数据，实际使用时换成真实接口即可');
+                    return false; // 阻止默认 form 跳转
+                });
+
+                layui.$('#collectList_emp_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('Confirm getUserList',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/sendWs?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                // 执行搜索重载
+                                table.reload('test', {
+                                    page: {
+                                        layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                                        limits: [15, 30, 50, 100], // 自定义每页显示条数的选项
+                                        limit: 15, // 每页默认显示条数
+                                        prev: 'Previous',
+                                        next: 'Next',
+                                        count: 'Total: {{count}}',
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+
+                            }
+                        });
+                    });
+                })
+                layui.$('#collectInfo_emp_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('Confirm getUserInfo',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/getUserInfo?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                // 执行搜索重载
+                                table.reload('test', {
+                                    page: {
+                                        layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                                        limits: [15, 30, 50, 100], // 自定义每页显示条数的选项
+                                        limit: 15, // 每页默认显示条数
+                                        prev: 'Previous',
+                                        next: 'Next',
+                                        count: 'Total: {{count}}',
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+                layui.$('#setUserToDevice_emp_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to send user info to device？',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/setPersonToDevice?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                // 执行搜索重载
+                                table.reload('test', {
+                                    page: {
+                                        layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                                        limits: [15, 30, 50, 100], // 自定义每页显示条数的选项
+                                        limit: 15, // 每页默认显示条数
+                                        prev: 'Previous',
+                                        next: 'Next',
+                                        count: 'Total: {{count}}',
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+
+                 layui.$('#setRemoteUserToDevice_emp_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to send user info to device？',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/setRemotePersonToDevice?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                // 执行搜索重载
+                                table.reload('test', {
+                                    page: {
+                                        layout: ['prev', 'page', 'next',  'count'], // 自定义分页布局
+                                        limits: [15, 30, 50, 100], // 自定义每页显示条数的选项
+                                        limit: 15, // 每页默认显示条数
+                                        prev: 'Previous',
+                                        next: 'Next',
+                                        count: 'Total: {{count}}',
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+
+
+
+
+                layui.$('#setUserName_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to send user name to device？', {
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    },function(){
+                        layui.$.ajax({
+                            url:'/api/setUsernameToDevice?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                            }
+                        });
+                    });
+                })
+
+                layui.$('#logInfo_emp_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    window.location.href = 'Home/one?deviceSn=' + deviceSn
+                })
+
+                layui.$('#initSys_emp_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to init device？it will clean all info', {
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    },function(){
+                        layui.$.ajax({
+                            url:'/api/initSystem?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                            }
+                        });
+                    });
+                })
+                layui.$('#accessWeek_emp_modal_btn').click(function () {
+                    layer.open({
+                        title: 'setAccessWeek',
+                        type: 1,
+                        content: layui.$('#add_accessWeek_form')
+                    });
+                })
+                layui.$('#accessDay_emp_modal_btn').click(function () {
+                    layer.open({
+                        title: 'setAccessDay',
+                        type: 1,
+                        content: layui.$('#add_accessDay_form')
+                    });
+                })
+                layui.$('#authorize_emp_modal_btn').click(function () {
+                    layer.open({
+                        title: 'setUserLock',
+                        type: 1,
+                        content: layui.$('#add_setUserLock_form')
+                    });
+                })
+                layui.$('#lockGroup_emp_modal_btn').click(function () {
+                    layer.open({
+                        title: 'lockGroup',
+                        type: 1,
+                        content: layui.$('#add_lockGroup_form')
+                    });
+                })
+                layui.$('#download_emp_modal_btn').click(function () {
+                    layer.open({
+                        title: 'downloadOnePerson:',
+                        type: 1,
+                        content: layui.$('#add_downloadOnePerson_form')
+                    });
+                })
+                layui.$('#getDeviceInfo_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to get device info？', {
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    },function(){
+                        layui.$.ajax({
+                            url:'/api/getDeviceInfo?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                table.reload('test', {
+                                    page: {
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+                layui.$('#openDoor_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.open({
+                        title: 'openDoor',
+                        type: 1,
+                        // area: ['30%','50%'],
+                        content: layui.$('#add_openDoor_form')
+                    });
+                })
+                
+                layui.$('#collectList_emp_modal_remote_btn').click(function() {
+    layer.open({
+        title: 'Add Remote User',
+        type: 1,
+        content: layui.$('#add_remoteUser_form'),
+        area: ['60%', '80%'] // Adjust the size as per requirement
+    });
+});
+                layui.$('#addUser_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.open({
+                        title: 'addUser',
+                        type: 1,
+
+                        content: layui.$('#addForm')
+                    });
+                })
+
+
+                layui.$('#getDevLock_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to get device lock info？',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/getDevLock?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                table.reload('test', {
+                                    page: {
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+
+                   
+   layui.form.on('submit(remoteUser_form_submit)', function(data) {
+    var deviceSn = getSelectedRowSerialNumbers(); // Get the selected device serial numbers
+
+    // Send data to the server (example API call)
+    layui.$.ajax({
+        url: '/api/addRemoteUser?deviceSn=' + deviceSn, // Send deviceSn in the query string
+        type: 'POST',
+        data: data.field, // Send the form data without deviceSn since it's in the query string
+        success: function(result) {
+            layer.msg('Remote User added successfully!');
+            layer.closeAll('page'); // Close the form modal
+            // Optionally, reload data or take other actions
+        },
+        error: function(xhr, status, error) {
+            layer.msg('Error: ' + error);
+        }
+    });
+
+    return false; // Prevent form default submission
+});
+
+
+
+        function getSelectedRowSerialNumbers() {
+    var table = layui.table;
+
+    // Get the selected rows from the table with the ID 'Devices'
+    var checkStatus = table.checkStatus('Devices');  // 'Devices' is the ID of your table
+    var selectedRows = checkStatus.data;  // The selected rows will be in the data array.
+
+    // Check if any rows are selected
+    if (selectedRows.length === 0) {
+        layer.msg('Please select at least one row!');
+        return [];  // Return an empty array if no rows are selected
+    }
+
+    // Create an array to store the serial numbers of the selected rows
+    var serialNumbers = [];
+
+    // Loop through the selected rows and push the serial_num of each to the array
+    selectedRows.forEach(function (row) {
+        serialNumbers.push(row.serial_num);  // Assuming 'serial_num' is the field name
+    });
+
+    return serialNumbers;  // Return the array of selected row serial numbers
+}
+
+        layui.$('#getUserLock_modal_btn').click(function () {
+            // Get the selected serial numbers from the table
+                    var deviceSn = getSelectedRowSerialNumbers();
+
+            // Ensure that at least one row is selected
+                    if (deviceSn.length > 0) {
+                // Assuming you want to use the first selected serial number for this action
+                        var serialNo = deviceSn[0];  // You can modify this logic to choose a specific serial number if needed
+                console.log('Selected Serial Number:', serialNo);
+
+                // Open the modal and pass the SerialNo to the modal
+                layer.open({
+                    title: 'Get User Lock',
+                    type: 1,
+                    content: layui.$('#getUserLock_form'),
+                    success: function () {
+                        // Set the SerialNo in the input field with id "serialNo_input"
+                        layui.$('#serialNo_input').val(serialNo);  // Assuming there is an input field with id="serialNo_input"
+                    }
+                });
+            } else {
+                // Show a message if no row is selected
+                layer.msg('Please select a device first.');
+            }
+        });
+
+
+
+
+                layui.$('#cleanAdmin_modal_btn').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to clean admin？',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/cleanAdmin?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                table.reload('test', {
+                                    page: {
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+                layui.$('#synchronize_Time').click(function () {
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    layer.confirm('do you want to synchronizeTime？',{
+                        title: 'Confirmation',  // 设置弹出框标题
+                        btn: ['Yes', 'No'],  // 设置按钮的文本
+                    }, function(){
+                        layui.$.ajax({
+                            url:'/api/synchronizeTime?deviceSn='+deviceSn,
+                            type:"GET",
+                            success:function(result){
+                                layer.msg(result.msg);
+                                //回到当前页
+                                table.reload('test', {
+                                    page: {
+                                        curr: 1 // 重新从第 1 页开始
+                                    },
+                                });
+                            }
+                        });
+                    });
+                })
+                // 工具栏事件
+                table.on('toolbar(test)', function(obj){
+                    var deviceSn = getSelectedRowSerialNumbers();
+                    var id = obj.config.id;
+                    var checkStatus = table.checkStatus(id);
+                    var othis = lay(this);
+                    console.log(obj.event)
+                    switch(obj.event){
+                        case 'collectList_emp_modal_btn':
+                        {
+                            layer.confirm('Confirm getUserList', function(){
+                                layui.$.ajax({
+                                    url:'/api/sendWs?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+
+                                    }
+                                });
+                            });
+                        }
+                            break;
+                        case 'collectInfo_emp_modal_btn':{
+                            layer.confirm('Confirm getUserInfo', function(){
+                                layui.$.ajax({
+                                    url:'/api/getUserInfo?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'setUserToDevice_emp_modal_btn':{
+                            layer.confirm('do you want to send user info to device？', function(){
+                                layui.$.ajax({
+                                    url:'/api/setPersonToDevice?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+
+                            break;
+                        }
+                        case 'setUserName_modal_btn': {
+                            layer.confirm('do you want to send user name to device？', function(){
+                                layui.$.ajax({
+                                    url:'/api/setUsernameToDevice?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'initSys_emp_modal_btn': {
+                            layer.confirm('do you want to init device？it will clean all info', function(){
+                                layui.$.ajax({
+                                    url:'/api/initSystem?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'accessWeek_emp_modal_btn': {
+                            layer.open({
+                                title: 'setAccessWeek',
+                                type: 1,
+                                area: ['60%','80%'],
+                                content: layui.$('#add_accessWeek_form')
+                            });
+                            break;
+                        }
+                        case 'accessDay_emp_modal_btn': {
+                            layer.open({
+                                title: 'setAccessDay',
+                                type: 1,
+                                area: ['60%','80%'],
+                                content: layui.$('#add_accessDay_form')
+                            });
+                            break;
+                        }
+                        case 'lockGroup_emp_modal_btn': {
+                            layer.open({
+                                title: 'lockGroup',
+                                type: 1,
+                                area: ['60%','80%'],
+                                content: layui.$('#add_lockGroup_form')
+                            });
+                            break;
+                        }
+                        case 'authorize_emp_modal_btn': {
+                            layer.open({
+                                title: 'setUserLock',
+                                type: 1,
+                                area: ['60%','80%'],
+                                content: layui.$('#add_setUserLock_form')
+                            });
+                            break;
+                        }
+                        case 'download_emp_modal_btn': {
+                            layer.open({
+                                title: 'downloadOnePerson:',
+                                type: 1,
+                                area: ['60%','80%'],
+                                content: layui.$('#add_downloadOnePerson_form')
+                            });
+                            break;
+                        }
+                        case 'getDeviceInfo_modal_btn': {
+                            layer.confirm('do you want to get device info？', function(){
+                                layui.$.ajax({
+                                    url:'/api/getDeviceInfo?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'openDoor_modal_btn': {
+                            layer.open({
+                                title: 'lockGroup',
+                                type: 1,
+                                area: ['60%','40%'],
+                                content: layui.$('#add_openDoor_form')
+                            });
+                            break;
+                        }
+                        case 'addUser_modal_btn': {
+                            layer.open({
+                                title: '添加',
+                                type: 1,
+                                area: ['60%','80%'],
+                                content: layui.$('#addForm')
+                            });
+                            break;
+                        }
+                        case 'getDevLock_modal_btn': {
+                            layer.confirm('do you want to get device lock info？', function(){
+                                layui.$.ajax({
+                                    url:'/api/getDevLock?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'getUserLock_modal_btn': {
+                            layer.open({
+                                title: 'getUserLock',
+                                type: 1,
+                                area: ['60%','40%'],
+                                content: layui.$('#getUserLock_form')
+                            });
+                            break;
+                        }
+                        case 'cleanAdmin_modal_btn': {
+                            layer.confirm('do you want to clean admin？', function(){
+                                layui.$.ajax({
+                                    url:'/api/cleanAdmin?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'synchronize_Time': {
+                            layer.confirm('do you want to synchronizeTime？',{
+                                title: 'Confirmation',  // 设置弹出框标题
+                                btn: ['Yes', 'No'],  // 设置按钮的文本
+                            }, function(){
+                                layui.$.ajax({
+                                    url:'/api/synchronizeTime?deviceSn='+deviceSn,
+                                    type:"GET",
+                                    success:function(result){
+                                        layer.msg(result.msg);
+                                        //回到当前页
+                                        table.reload('test', {
+                                            page: {
+                                                curr: 1 // 重新从第 1 页开始
+                                            },
+                                        });
+                                    }
+                                });
+                            });
+                            break;
+                        }
+                        case 'getCheckData':
+                            var data = checkStatus.data;
+                            layer.alert(layui.util.escape(JSON.stringify(data)));
+                            break;
+                        case 'getData':
+                            var getData = table.getData(id);
+                            console.log(getData);
+                            layer.alert(layui.util.escape(JSON.stringify(getData)));
+                            break;
+                    };
+                });
+                // 表头自定义元素工具事件 --- 2.8.8+
+                table.on('colTool(test)', function(obj){
+                    var event = obj.event;
+                    console.log(obj);
+                    if(event === 'email-tips'){
+                        layer.alert(layui.util.escape(JSON.stringify(obj.col)), {
+                            title: '当前列属性配置项'
+                        });
+                    }
+                });
+
+                // 触发单元格工具事件
+                table.on('tool(test)', function(obj){ // 双击 toolDouble
+                    var data = obj.data; // 获得当前行数据
+                    if (obj.event=='pre_img'){
+                        var path ='/images/tmp/'+data.imagePath
+                        layer.photos({
+                            photos: {
+                                "title": "Photos Demo",
+                                "start": 0,
+                                "data": [
+                                    {
+                                        "src": path,
+                                    }]}})
+
+                    }
+                    else if(obj.event === 'view'){
+                        layui.$('#downloadEnrollId').val(data.enrollId)
+                        layer.open({
+                            title: 'downloadOnePerson - id:'+ data.enrollId,
+                            type: 1,
+                            area: ['60%','80%'],
+                            content: layui.$('#add_downloadOnePerson_form')
+                        });
+                    }
+                    else if(obj.event === 'edit'){
+                        layui.$('#uploadOneUserId').val(data.enrollId)
+                        layer.open({
+                            title: 'uploadOneUser - id:'+ data.enrollId,
+                            type: 1,
+                            area: ['60%','80%'],
+                            content: layui.$('#add_uploadOneUser_form')
+                        });
+                    }else if(obj.event === 'delete'){
+                        layer.confirm('do you want to delete [id: '+ data.enrollId +'] ?',{
+                            title: 'Confirmation',  // 设置弹出框标题
+                            btn: ['Yes', 'No'],  // 设置按钮的文本
+                        }, function(index){
+                            obj.del(); // 删除对应行（tr）的DOM结构
+                            layer.close(index);
+                            // 向服务端发送删除指令
+                            layui.$.ajax({
+                                url:"/api/deletePersonFromDevice?enrollId="+data.enrollId+"&deviceSn="+layui.$('#deviceid').val(),
+                                type:"GET",
+                                success:function(result){
+                                    layer.msg(result.msg);
+                                    //回到当前页
+                                }
+                            });
+
+                        });
+                    }
+                    else if(obj.event === 'more'){
+                        // 更多 - 下拉菜单
+                        dropdown.render({
+                            elem: this, // 触发事件的 DOM 对象
+                            show: true, // 外部事件触发即显示
+                            data: [{
+                                title: '查看',
+                                id: 'detail'
+                            },{
+                                title: '删除',
+                                id: 'del'
+                            }],
+                            click: function(menudata){
+                                if(menudata.id === 'detail'){
+                                    layer.msg('查看操作，当前行 ID:'+ data.id);
+                                } else if(menudata.id === 'del'){
+                                    layer.confirm('真的删除行 [id: '+ data.enrollId +'] 么', function(index){
+                                        obj.del(); // 删除对应行（tr）的DOM结构
+                                        layer.close(index);
+                                        // 向服务端发送删除指令
+                                        layui.$.ajax({
+                                            url:"/api/deletePersonFromDevice?enrollId="+data.enrollId+"&deviceSn="+layui.$('#deviceid').val(),
+                                            type:"GET",
+                                            success:function(result){
+                                                layer.msg(result.msg);
+                                                //回到当前页
+                                            }
+                                        });
+
+                                    });
+                                }
+                            },
+                            align: 'right', // 右对齐弹出
+                            style: 'box-shadow: 1px 1px 10px rgb(0 0 0 / 12%);' // 设置额外样式
+                        })
+                    }
+                });
+
+                // 触发表格复选框选择
+                table.on('checkbox(test)', function(obj){
+                    console.log(obj)
+                });
+
+                // 触发表格单选框选择
+                table.on('radio(test)', function(obj){
+                    console.log(obj)
+                });
+
+                // 行单击事件
+                table.on('row(test)', function(obj){
+                    //console.log(obj);
+                    //layer.closeAll('tips');
+                });
+                // 行双击事件
+                table.on('rowDouble(test)', function(obj){
+                    console.log(obj);
+                });
+
+                // 单元格编辑事件
+                table.on('edit(test)', function(obj){
+                    var field = obj.field; // 得到字段
+                    var value = obj.value; // 得到修改后的值
+                    var data = obj.data; // 得到所在行所有键值
+                    // 值的校验
+                    if (field === 'email') {
+                        var tts = /^([a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]\.)+[a-zA-Z]{2,}$/
+                        if (!tts.test(obj.value)){
+                            layer.tips('输入的邮箱格式不正确，请重新编辑', this, {tips: 1});
+                            return obj.reedit(); // 重新编辑 -- v2.8.0 新增
+                        }
+                    }
+                    // 编辑后续操作，如提交更新请求，以完成真实的数据更新
+                    // …
+                    layer.msg('编辑成功', {icon: 1});
+
+                    // 其他更新操作
+                    var update = {};
+                    update[field] = value;
+                    obj.update(update);
+                });
+            });
+    </script>
+
+    <div class="layui-row" id="add_accessDay_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="accessDay_form" enctype="multipart/form-data">
+            <div class="layui-form-item">
+                <label class="layui-form-label">ID</label>
+                <div class="layui-input-block">
+
+                    <select lay-verify="required" name="id" lay-filter="accessDay_form_id_filter">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">serial</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" id="day_serial" name="serial" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">name</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" id="day_name" name="name" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">Time1</label>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="startTime1" id="startTime1" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="endTime1" id="endTime1" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Time2</label>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="startTime2" id="startTime2" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="endTime2" id="endTime2" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Time3</label>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="startTime3" id="startTime3" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="endTime3" id="endTime3" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Time4</label>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="startTime4" id="startTime4" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="endTime4" id="endTime4" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Time5</label>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="startTime5" id="startTime5" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+                <div class="layui-input-inline layui-input-wrap">
+                    <input type="text" name="endTime5" id="endTime5" placeholder="00:00" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="accessDay_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--add_accessWeek_form-->
+    <div class="layui-row" id="add_accessWeek_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="accessWeek_form" enctype="multipart/form-data">
+            <div class="layui-form-item">
+                <label class="layui-form-label">ID</label>
+                <div class="layui-input-block">
+
+                    <select lay-verify="required" name="id" lay-filter="accessWeek_form_id_filter">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">name</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" id="week_name" name="name" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Sunday</label>
+                <div class="layui-input-block">
+                    <select id="sunday_id" name="sunday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Monday</label>
+                <div class="layui-input-block">
+                    <select id="monday_id" name="monday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Tuesday</label>
+                <div class="layui-input-block">
+                    <select id="tuesday_id" name="tuesday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Wednesday</label>
+                <div class="layui-input-block">
+                    <select id="wednesday_id" name="wednesday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Thursday</label>
+                <div class="layui-input-block">
+                    <select id="thursday_id" name="thursday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Friday</label>
+                <div class="layui-input-block">
+                    <select id="friday_id" name="friday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Saturday</label>
+                <div class="layui-input-block">
+                    <select id="saturday_id" name="saturday"></select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="accessWeek_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--addUserForm-->
+    <div class="layui-row" id="addForm" style="display:none;padding: 40px">
+        <form class="layui-form" id="form" enctype="multipart/form-data">
+            <div class="layui-form-item">
+                <label class="layui-form-label">USER ID</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="userId" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">NAME</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="name" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">PRIVILEGE</label>
+                <div class="layui-input-block">
+                    <select name="privilege">
+                        <option value="0">USER</option>
+                        <option value="1">MANAGER</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">PICTURE</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="file" name="pic" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">PASSWORD</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="password" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">CARDNUM</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="cardNum" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="form-add-person">Submit</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">Reset</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <!--add_lockGroup_form-->
+    <div class="layui-row" id="add_lockGroup_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="lockGroup_form" enctype="multipart/form-data">
+            <div class="layui-form-item">
+                <label class="layui-form-label">group1</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="group1" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">group2</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="group2" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">group3</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="group3" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">group4</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="group4" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">group5</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="group5" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="lockGroup_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--add_openDoor_form-->
+    <div class="layui-row" id="add_openDoor_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="openDoor_form" enctype="multipart/form-data">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">DoorNum</label>
+                <div class="layui-input-block">
+
+                    <select lay-verify="required" name="doorNum" id="doorNum">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="openDoor_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--getUserLock_form-->
+    <div class="layui-row" id="getUserLock_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="getUserLock" enctype="multipart/form-data">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">enrollId</label>
+                <div class="layui-input-block">
+                    <input lay-verify="required" class="layui-input" name="enrollId" id="lockEnrollId">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="getUserLock_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--add_downloadOnePerson_form-->
+    <div class="layui-row" id="add_downloadOnePerson_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="downloadOnePerson_form" enctype="multipart/form-data">
+
+            <blockquote class="layui-elem-quote">
+                BackupNum 1-9 is fingerprint,20-27 is face,30-37 is palm
+            </blockquote>
+            <div class="layui-form-item">
+                <label class="layui-form-label">enrollId</label>
+                <div class="layui-input-block">
+                    <input lay-verify="required" class="layui-input" name="enrollId" id="downloadEnrollId">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">backupNum</label>
+                <div class="layui-input-block">
+
+                    <select lay-verify="required" name="backupNum" id="backupNumSelect1" class="form-control">
+
+                        <option value="0">Fingerprint 0</option>
+                        <option value="1">Fingerprint 1</option>
+                        <option value="2">Fingerprint 2</option>
+                        <option value="3">Fingerprint 3</option>
+                        <option value="4">Fingerprint 4</option>
+                        <option value="5">Fingerprint 5</option>
+                        <option value="6">Fingerprint 6</option>
+                        <option value="7">Fingerprint 7</option>
+                        <option value="8">Fingerprint 8</option>
+                        <option value="9">Fingerprint 9</option>
+                        <option value="10">Password</option>
+                        <option value="11">Card Number</option>
+                        <option value="20">Face 1</option>
+                        <option value="21">Face 1</option>
+                        <option value="22">Face 1</option>
+                        <option value="23">Face 1</option>
+                        <option value="24">Face 2</option>
+                        <option value="25">Face 2</option>
+                        <option value="26">Face 2</option>
+                        <option value="27">Face 2</option>
+                        <option value="30">Palm 1</option>
+                        <option value="31">Palm 1</option>
+                        <option value="32">Palm 1</option>
+                        <option value="33">Palm 1</option>
+                        <option value="34">Palm 2</option>
+                        <option value="35">Palm 2</option>
+                        <option value="36">Palm 2</option>
+                        <option value="37">Palm 2</option>
+                        <option value="50">Photo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="downloadOnePerson_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--add_uploadOneUser_form-->
+    <div class="layui-row" id="add_uploadOneUser_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="uploadOneUser_form" enctype="multipart/form-data">
+
+            <blockquote class="layui-elem-quote">
+                BackupNum 1-9 is fingerprint,20-27 is face,30-37 is palm
+            </blockquote>
+            <div class="layui-form-item">
+                <label class="layui-form-label">enrollId</label>
+                <div class="layui-input-block">
+                    <input lay-verify="required" disabled class="layui-input" name="enrollId" id="uploadOneUserId">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">backupNum</label>
+                <div class="layui-input-block">
+                    <select lay-verify="required" name="backupNum" class="form-control">
+                        <option value="-1">name</option>
+                        <option value="0">Fingerprint 0</option>
+                        <option value="1">Fingerprint 1</option>
+                        <option value="2">Fingerprint 2</option>
+                        <option value="3">Fingerprint 3</option>
+                        <option value="4">Fingerprint 4</option>
+                        <option value="5">Fingerprint 5</option>
+                        <option value="6">Fingerprint 6</option>
+                        <option value="7">Fingerprint 7</option>
+                        <option value="8">Fingerprint 8</option>
+                        <option value="9">Fingerprint 9</option>
+                        <option value="10">Password</option>
+                        <option value="11">Card Number</option>
+                        <option value="20">Face 1</option>
+                        <option value="21">Face 1</option>
+                        <option value="22">Face 1</option>
+                        <option value="23">Face 1</option>
+                        <option value="24">Face 2</option>
+                        <option value="25">Face 2</option>
+                        <option value="26">Face 2</option>
+                        <option value="27">Face 2</option>
+                        <option value="30">Palm 1</option>
+                        <option value="31">Palm 1</option>
+                        <option value="32">Palm 1</option>
+                        <option value="33">Palm 1</option>
+                        <option value="34">Palm 2</option>
+                        <option value="35">Palm 2</option>
+                        <option value="36">Palm 2</option>
+                        <option value="37">Palm 2</option>
+                        <option value="50">Photo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="uploadOneUser_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Add Remote User Form -->
+<div class="layui-row" id="add_remoteUser_form" style="display:none;padding: 40px">
+    <form class="layui-form" id="remoteUser_form" enctype="multipart/form-data">
+        <div class="layui-form-item">
+            <label class="layui-form-label">User ID</label>
+            <div class="layui-input-block layui-input-wrap">
+                <input type="text" name="userId" lay-verify="required" autocomplete="off" class="layui-input" placeholder="Enter User ID">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">Name</label>
+            <div class="layui-input-block layui-input-wrap">
+                <input type="text" name="name" lay-verify="required" autocomplete="off" class="layui-input" placeholder="Enter Name">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">Privilege</label>
+            <div class="layui-input-block">
+                <select name="privilege" lay-verify="required">
+                    <option value="0">User</option>
+                    <option value="1">Manager</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">Picture</label>
+            <div class="layui-input-block layui-input-wrap">
+                <input type="file" name="pic" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">Password</label>
+            <div class="layui-input-block layui-input-wrap">
+                <input type="password" name="password" autocomplete="off" class="layui-input" placeholder="Enter Password">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">Card Number</label>
+            <div class="layui-input-block layui-input-wrap">
+                <input type="text" name="cardNum" autocomplete="off" class="layui-input" placeholder="Enter Card Number">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit lay-filter="remoteUser_form_submit">Submit</button>
+                <button type="reset" class="layui-btn layui-btn-primary">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Add Remote User Button (Trigger) -->
+<button class="layui-btn" id="addRemoteUser_modal_btn">Add Remote User</button>
+
+
+    <!--add_setUserLock_form-->
+    <div class="layui-row" id="add_setUserLock_form" style="display:none;padding: 40px">
+        <form class="layui-form" id="setUserLock_form" enctype="multipart/form-data">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">enrollId</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="enrollId" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">weekZone</label>
+                <div class="layui-input-block">
+
+                    <select lay-verify="required" name="weekZone">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">group</label>
+                <div class="layui-input-block">
+
+                    <select lay-verify="required" name="group">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">starttime</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="starttime" id="starttime" placeholder="yyyy-MM-dd" autocomplete="off" lay-affix="clear" class="layui-input">
+
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">endtime</label>
+                <div class="layui-input-block layui-input-wrap">
+                    <input type="text" name="endtime" id="endtime" placeholder="yyyy-MM-dd" autocomplete="off" lay-affix="clear" class="layui-input">
+
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit lay-filter="setUserLock_form_submit">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <!-- Include all your existing table templates here -->
+    <!-- ... -->
+</body>
+</html>

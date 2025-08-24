@@ -1,9 +1,0 @@
-﻿@model NewsPublish.Model.Response.ResponseModel
-
-<ul id="news-nav" class="nav navbar-nav navbar-right">
-    <li><a asp-action="index" asp-controller="home">首页</a></li>
-    @foreach(var item in Model.Data)
-    {
-        <li><a asp-action="classify" asp-controller="news" asp-route-id="@item.Id">@item.Name</a></li>
-    }
-</ul>
