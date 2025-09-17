@@ -1,0 +1,387 @@
+2025-08-31 03:43:53.116 +05:00 [INF] WebSocket closed
+2025-08-31 03:43:53.269 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 03:43:59.435 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 03:43:59.437 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 03:43:15","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 03:43:59.445 +05:00 [INF] WebSocket connected from 182.191.74.206:10855
+2025-08-31 03:43:59.450 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 03:43:59.455 +05:00 [INF] WebSocket connected from 182.191.74.206:10855
+2025-08-31 03:43:59.458 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 03:43:15",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 05:40:53.113 +05:00 [INF] WebSocket closed
+2025-08-31 05:40:53.253 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 05:40:55.141 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 05:40:10","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 05:40:55.146 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 05:40:55.150 +05:00 [INF] WebSocket connected from 182.191.74.206:41172
+2025-08-31 05:40:55.154 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 05:40:10",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 05:40:55.180 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 05:40:55.182 +05:00 [INF] WebSocket connected from 182.191.74.206:41172
+2025-08-31 06:11:53.111 +05:00 [INF] WebSocket closed
+2025-08-31 06:11:53.171 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 06:11:57.167 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 06:11:57.172 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 06:11:12","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 06:11:57.173 +05:00 [INF] WebSocket connected from 182.191.74.206:11151
+2025-08-31 06:11:57.177 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 06:11:57.182 +05:00 [INF] WebSocket connected from 182.191.74.206:11151
+2025-08-31 06:11:57.185 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 06:11:12",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 10:01:53.114 +05:00 [INF] WebSocket closed
+2025-08-31 10:01:53.295 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 10:01:56.104 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 10:01:11","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 10:01:56.104 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 10:01:56.321 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 10:01:56.324 +05:00 [INF] WebSocket connected from 182.191.74.206:41174
+2025-08-31 10:01:56.326 +05:00 [INF] WebSocket connected from 182.191.74.206:41174
+2025-08-31 10:01:56.331 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 10:01:11",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 10:26:53.114 +05:00 [INF] WebSocket closed
+2025-08-31 10:26:53.170 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 10:27:01.793 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 10:27:01.797 +05:00 [INF] WebSocket connected from 182.191.74.206:11547
+2025-08-31 10:27:02.076 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 10:26:17","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 10:27:02.129 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 10:27:02.135 +05:00 [INF] WebSocket connected from 182.191.74.206:11547
+2025-08-31 10:27:02.144 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 10:26:17",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 10:29:53.118 +05:00 [INF] WebSocket closed
+2025-08-31 10:29:53.164 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 10:30:02.512 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 10:29:18","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 10:30:02.517 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 10:30:02.520 +05:00 [INF] WebSocket connected from 182.191.74.206:41176
+2025-08-31 10:30:02.525 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 10:29:18",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 10:30:02.533 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 10:30:02.536 +05:00 [INF] WebSocket connected from 182.191.74.206:41176
+2025-08-31 12:19:53.152 +05:00 [INF] WebSocket closed
+2025-08-31 12:19:53.225 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 12:19:57.758 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 12:19:13","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 12:19:57.758 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 12:19:57.767 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 12:19:57.769 +05:00 [INF] WebSocket connected from 182.191.74.206:11713
+2025-08-31 12:19:57.780 +05:00 [INF] WebSocket connected from 182.191.74.206:11713
+2025-08-31 12:19:57.784 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 12:19:13",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 12:41:53.115 +05:00 [INF] WebSocket closed
+2025-08-31 12:41:53.203 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 12:41:53.468 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 12:41:09","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 12:41:53.472 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 12:41:53.475 +05:00 [INF] WebSocket connected from 182.191.74.206:41178
+2025-08-31 12:41:53.479 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 12:41:09",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}
+2025-08-31 12:41:53.479 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 12:41:53.485 +05:00 [INF] WebSocket connected from 182.191.74.206:41178
+2025-08-31 16:20:53.113 +05:00 [INF] WebSocket closed
+2025-08-31 16:20:53.358 +05:00 [INF] WebSocket closed: "ws://210.2.159.25:7788/pub/chat"
+2025-08-31 16:20:53.461 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 16:20:53.465 +05:00 [INF] WebSocket connected from 182.191.74.206:12069
+2025-08-31 16:20:53.584 +05:00 [INF] ----Ask message---- {"cmd":"reg","sn":"AYSJ14002365","devinfo":{"modelname":"TRG-AI01(50K) WIFI","manufacturer":"","usersize":50000,"facesize":50000,"fpsize":0,"palmsize":0,"cardsize":50000,"pwdsize":50000,"logsize":500000,"useduser":2,"usedface":2,"usedfp":0,"usedpalm":0,"usedcard":0,"usedpwd":0,"usedlog":0,"usednewlog":0,"usedrtlog":0,"netinuse":2,"usb4g":0,"fpalgo":"thbio3.0","firmware":"ai810_f50v_v5.08","time":"2025-08-31 16:20:09","intercom":0,"floors":48,"charid":1,"useosdp":0,"dislanguage":3,"curip":"192.168.100.205","mac":"00-01-A9-02-CD-E6"}}
+2025-08-31 16:20:53.589 +05:00 [INF] Client connected with path: /pub/chat
+2025-08-31 16:20:53.603 +05:00 [INF] WebSocket connected from 182.191.74.206:12069
+2025-08-31 16:20:53.607 +05:00 [INF] deviceOn{
+  "cmd": "reg",
+  "sn": "AYSJ14002365",
+  "devinfo": {
+    "modelname": "TRG-AI01(50K) WIFI",
+    "manufacturer": "",
+    "usersize": 50000,
+    "facesize": 50000,
+    "fpsize": 0,
+    "palmsize": 0,
+    "cardsize": 50000,
+    "pwdsize": 50000,
+    "logsize": 500000,
+    "useduser": 2,
+    "usedface": 2,
+    "usedfp": 0,
+    "usedpalm": 0,
+    "usedcard": 0,
+    "usedpwd": 0,
+    "usedlog": 0,
+    "usednewlog": 0,
+    "usedrtlog": 0,
+    "netinuse": 2,
+    "usb4g": 0,
+    "fpalgo": "thbio3.0",
+    "firmware": "ai810_f50v_v5.08",
+    "time": "2025-08-31 16:20:09",
+    "intercom": 0,
+    "floors": 48,
+    "charid": 1,
+    "useosdp": 0,
+    "dislanguage": 3,
+    "curip": "192.168.100.205",
+    "mac": "00-01-A9-02-CD-E6"
+  }
+}

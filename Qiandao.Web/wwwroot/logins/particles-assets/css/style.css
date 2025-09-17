@@ -1,0 +1,240 @@
+body canvas {
+  transition: background-color 0.25s ease-out;
+}
+
+body #particles{
+  z-index: 999;
+}
+
+body .theme-white canvas {
+  background-color: #f8f8f8;
+}
+body .theme-white .guide .dot {
+  background-color: #fff;
+}
+body .theme-white .guide .ring {
+  border-color: #fff;
+}
+body .theme-grey canvas {
+  background-color: #fff;
+}
+body .theme-grey .guide .dot {
+  background-color: #fff;
+}
+body .theme-grey .guide .ring {
+  border-color: #fff;
+}
+body .theme-dark canvas {
+  background-color: #fff;
+}
+body .theme-dark .guide .dot {
+  background-color: #fff;
+}
+body .theme-dark .guide .ring {
+  border-color: #fff;
+}
+body .theme-orange canvas {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body .theme-orange .guide .dot {
+  background-color: #fff;
+}
+body .theme-orange .guide .ring {
+  border-color: #fff;
+}
+body .theme-blue canvas {
+  background-color: #fff;
+}
+body .theme-blue .guide .dot {
+  background-color: #fff;
+}
+body .theme-blue .guide .ring {
+  border-color: #fff;
+}
+body .guide {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+}
+body .guide .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+  margin: auto;
+}
+body .guide .ring {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  border: 1px solid #fff;
+}
+body .guide .ring.ring-one {
+  transform: scale(0.6);
+  opacity: 0.2;
+}
+body .appSettings {
+  display: none;
+  width: 500px;
+  height: 178.5714285714px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  padding: 20px 0;
+}
+body .appSettings .setting {
+  padding: 15px 30px;
+  color: #fff;
+}
+body .appSettings .setting-theme > *, body .appSettings .setting-senseRadius > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+body .appSettings .setting-theme div {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin-left: 15px;
+  transition: transform 0.25s ease-out;
+  cursor: pointer;
+}
+body .appSettings .setting-theme div.blue {
+  background-color: #fff;
+}
+body .appSettings .setting-theme div.grey {
+  background-color: #fff;
+}
+body .appSettings .setting-theme div.orange {
+  background-color: #fff;
+}
+body .appSettings .setting-theme div.dark {
+  background-color: #fff;
+}
+body .appSettings .setting-theme div.white {
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+body .appSettings .setting-theme div:hover {
+  transform: scale(1.3);
+}
+body .radios .radio {
+  display: inline-block;
+  margin-right: 40px;
+}
+body .radios .radio > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+body .radios .radio .radio-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  border: 1px solid #fff;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+body .radios .radio .radio-icon svg {
+  width: 16px;
+  margin-top: 11px;
+  overflow: visible;
+  fill: #fff;
+}
+body .radios .radio .radio-title {
+  margin-left: 20px;
+  color: #fff;
+}
+body .dragbar {
+  margin-left: 20px;
+  margin-top: 3px;
+  position: relative;
+  width: 280px;
+  height: 19px;
+}
+body .dragbar .drag-values {
+  position: absolute;
+  font-size: 12px;
+  color: #aaa;
+  top: -20px;
+}
+body .dragbar .drag-values.dragFrom {
+  left: 0;
+}
+body .dragbar .drag-values.dragTo {
+  right: 0;
+}
+body .dragbar .drag-guide {
+  width: 100%;
+  height: 5px;
+  margin-top: 7px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .dragbar .draggie {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border-radius: 19px;
+  background-color: #333;
+  cursor: pointer;
+}
+body .dragbar .draggie span {
+  position: absolute;
+  width: 40px;
+  top: 25px;
+  left: -11px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.single-item div{
+    width: 100%;
+    height: 100vh;
+}
+
+.single-item .div-1{
+  background-image: url(../images/1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.single-item .div-2{
+  background-image: url(../images/2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.single-item .div-3{
+  background-image: url(../images/3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.single-item .div-4{
+  background-image: url(../images/4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slides-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
