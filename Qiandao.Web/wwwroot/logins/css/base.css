@@ -11313,7 +11313,7 @@ button,
 
 .bg-sunny-morning {
     /*background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%) !important;*/
-    background-image: url('/files/logins/citydark.jpg') !important;
+    background-image: url('/logins/citydark.jpg') !important;
     background-size:100% 100%;
 }
 
@@ -11351,7 +11351,7 @@ button,
 
 .bg-plum-plate {
     /*background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;*/
-    background-image: url('/files/logins/city.jpg') !important;
+    background-image: url('/logins/city.jpg') !important;
     background-size: 100% 100%;
 }
 
@@ -11381,7 +11381,7 @@ button,
 
 .bg-premium-dark {
     /*background-image: linear-gradient(to right, #434343 0%, black 100%) !important;*/
-    background-image: url('/files/logins/citynights.jpg') !important;
+    background-image: url('/logins/citynights.jpg') !important;
     background-size: 100% 100%;
 }
 
@@ -43365,31 +43365,31 @@ span.multiselect-native-select select {
 
 @keyframes backgroundColors {
     0% {
-        background-image: url('/files/logins/1.jpg');
+        background-image: url('/logins/1.jpg');
         background-size:100% 100%;
         background-repeat:no-repeat;
         /*background-color: cyan;*/
     }
     25% {
-        background-image: url('/files/logins/2.jpg');
+        background-image: url('/logins/2.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         /*background-color: tomato;*/
     }
 	50% {
-        background-image: url('/files/logins/3.jpg');
+        background-image: url('/logins/3.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         /*background-color: tomato;*/
     }
     75% {
-        background-image: url('/files/logins/4.jpg');
+        background-image: url('/logins/4.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         /*background-color: violet;*/
     }
 	100% {
-        background-image: url('/files/logins/5.jpg');
+        background-image: url('/logins/5.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         /*background-color: tomato;*/

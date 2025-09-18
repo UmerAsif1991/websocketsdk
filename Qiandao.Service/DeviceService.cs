@@ -1,10 +1,11 @@
-﻿using Qiandao.Model.Entity;
-using Qiandao.Model.Request;
-using Qiandao.Model.Response;
-using AutoMapper;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Qiandao.Model.Entity;
+using Qiandao.Model.Request;
+using Qiandao.Model.Response;
 using System.Collections.Generic;
 
 
@@ -128,12 +129,12 @@ namespace Qiandao.Service
          /// <summary>
         /// 每天签到集合获取
         /// </summary>
-        public async Task<ResponseModel> GetdeviceallList()
+        public async Task<ResponseModel> GetdeviceallList(int TenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
                 await semaphore.WaitAsync();  // 异步等待
-                var query = _db.Database.SqlQueryRaw<Device>(@"SELECT * FROM device");
+                var query = _db.Database.SqlQueryRaw<Device>($@"SELECT * FROM device where TenantId = {TenantId}");
                 // 执行查询并返回结果
                 if (query == null)
                 {
@@ -157,45 +158,55 @@ namespace Qiandao.Service
                 return responseModel;
             }
         }
-        public async Task<ResponseModel> GetdeviceallListNew()
+        public async Task<ResponseModel> GetdeviceallListNew(int TenantId)
         {
-            using (var semaphore = new SemaphoreSlim(1, 1))
+            try
             {
-                await semaphore.WaitAsync();  // Asynchronously wait
-                var query = _db.Database.SqlQueryRaw<DeviceNew>(@"SELECT DeviceId as Id , DeviceName , Serial_num , 1 Status FROM AttendanceMachine");
 
-                // Execute query and return results
-                if (query == null)
+                using (var semaphore = new SemaphoreSlim(1, 1))
                 {
-                    return new ResponseModel();
-                }
+                    await semaphore.WaitAsync();  // Asynchronously wait
 
-                var queryResult = query.ToList();
-                ResponseModel responseModel = new ResponseModel();
-                responseModel.Data = new List<DeviceNew>();
-                
-                foreach (var comment in queryResult)
-                {
-                    // Get device information using the Serial_num
-                    ResponseModel deviceInfoResponse = GetDeviceInfo(comment.Serial_num);
+                    var query = _db.Database.SqlQueryRaw<DeviceNew>($@"SELECT DeviceId as Id , DeviceName , Serial_num , 1 Status FROM AttendanceMachine Where TenantId = {TenantId}");
 
-                    // Update status with the result of the GetDeviceInfo method
-                    int status = deviceInfoResponse.Result == "success" ? 1 : 0; // Replace based on your requirement
-
-                    responseModel.Data.Add(new DeviceNew
+                    // Execute query and return results
+                    if (query == null)
                     {
-                        Id = comment.Id,
-                        Serial_num = comment.Serial_num,
-                        DeviceName = comment.DeviceName,
-                        Status = status  // Replace status with the result from GetDeviceInfo
-                    });
+                        return new ResponseModel();
+                    }
+
+                    var queryResult = query.ToList();
+                    ResponseModel responseModel = new ResponseModel();
+                    responseModel.Data = new List<DeviceNew>();
+
+                    foreach (var comment in queryResult)
+                    {
+                        // Get device information using the Serial_num
+                        ResponseModel deviceInfoResponse = GetDeviceInfo(comment.Serial_num);
+
+                        // Update status with the result of the GetDeviceInfo method
+                        int status = deviceInfoResponse.Result == "success" ? 1 : 0; // Replace based on your requirement
+
+                        responseModel.Data.Add(new DeviceNew
+                        {
+                            Id = comment.Id,
+                            Serial_num = comment.Serial_num,
+                            DeviceName = comment.DeviceName,
+                            Status = status  // Replace status with the result from GetDeviceInfo
+                        });
+                    }
+
+                    semaphore.Release();
+                    responseModel.Code = 200;
+                    responseModel.Result = "Devices";
+
+                    return responseModel;
                 }
+            }
+            catch (Exception ex)
+            {
 
-                semaphore.Release();
-                responseModel.Code = 200;
-                responseModel.Result = "Devices";
-
-                return responseModel;
+                throw;
             }
         }
 

@@ -13,7 +13,9 @@ namespace Qiandao.Service
         public HRMDb(DbContextOptions options) : base(options)
         { }
 
-
+        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Roles> Roles { get; set; }
+        public virtual DbSet<Tenant> Tenant { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

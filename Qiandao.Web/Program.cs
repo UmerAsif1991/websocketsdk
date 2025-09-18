@@ -38,6 +38,7 @@ public class Program
             // Register your services
             builder.Services.AddScoped<Access_dayService>();
             builder.Services.AddScoped<Access_weekService>();
+            builder.Services.AddScoped<LoginService>();
             builder.Services.AddScoped<DeviceService>();
             builder.Services.AddScoped<EnrollinfoService>();
             builder.Services.AddScoped<PersonService>();
@@ -49,6 +50,14 @@ public class Program
             builder.Services.AddSingleton<WebSocketServer>();
             builder.Services.AddSingleton<WebSocketHandler>();
             builder.Services.AddSingleton<ServerManager>();
+
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // session timeout
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
             // Use Serilog as the logging provider
             builder.Host.UseSerilog();
@@ -68,11 +77,13 @@ public class Program
             app.UseRouting();
             app.UseAuthorization();
 
+            app.UseSession();
+
             // Configure routes
             app.MapControllers();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Authentication}/{action=Login}/{id?}");
 
             // Start WebSocket server
             var webSocketServer = app.Services.GetRequiredService<ServerManager>();

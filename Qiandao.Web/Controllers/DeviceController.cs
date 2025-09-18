@@ -3,6 +3,7 @@ using Qiandao.Model.Entity;
 using Qiandao.Model.Request;
 using Qiandao.Model.Response;
 using Qiandao.Service;
+using Qiandao.Web.Extensions;
 using Qiandao.Web.WebSocketHandler;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -42,7 +43,9 @@ namespace Qiandao.Web.Controllers
             {
                 return BadRequest("deviceServer service not initialized.");
             }
-            ResponseModel rm =await deviceServer.GetdeviceallList();
+
+            int TenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
+            ResponseModel rm =await deviceServer.GetdeviceallList(TenantId);
             return Ok(new { code = 0, msg = "success", count = rm.Data.Count, data = rm.Data });
         }
 
@@ -55,9 +58,10 @@ namespace Qiandao.Web.Controllers
                 return BadRequest("deviceServer service not initialized.");
             }
 
+            int TenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             // Fetch the device lists using the deviceService methods
-            ResponseModel rm = await deviceServer.GetdeviceallListNew();
-            ResponseModel rmActive = await deviceServer.GetdeviceallList();
+            ResponseModel rm = await deviceServer.GetdeviceallListNew(TenantId);
+            ResponseModel rmActive = await deviceServer.GetdeviceallList(TenantId);
 
             // Check if both responses are valid
             if (rm.Code == 200 && rm.Data != null && rmActive.Code == 200 && rmActive.Data != null)

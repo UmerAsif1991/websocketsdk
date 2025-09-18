@@ -2,6 +2,7 @@
 using Qiandao.Model.Entity;
 using Qiandao.Model.Response;
 using Qiandao.Service;
+using Qiandao.Web.Extensions;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -37,8 +38,10 @@ namespace Qiandao.Web.Controllers
                 return BadRequest("Person service not initialized.");
             }
 
-            ResponseModel rm = personServer.GetPersonList(page, limit);
-            ResponseModel rmx = personServer.GetPersonList(1, 10000);
+            long TenantId = Convert.ToInt64(HttpContext.Session.GetObject<string>("TenantId"));
+
+            ResponseModel rm = personServer.GetPersonList(page, limit,TenantId);
+            ResponseModel rmx = personServer.GetPersonList(1, 10000, TenantId);
             if (rm == null)
             {
                 return NotFound("No data found.");

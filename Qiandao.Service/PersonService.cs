@@ -106,7 +106,7 @@ namespace Qiandao.Service
         }
 
 
-        public ResponseModel GetPersonList(int page, int limit)
+        public ResponseModel GetPersonList(int page, int limit, long TenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -115,7 +115,7 @@ namespace Qiandao.Service
                 var sqlQuery = $@"
     WITH CTE AS (
         SELECT *,  ROW_NUMBER() OVER (ORDER BY Id asc) AS RowNum
-        FROM Person)
+        FROM Person where TenantId = {TenantId})
     SELECT *
     FROM CTE
     WHERE RowNum BETWEEN (@SkipCount+1)  AND (@SkipCount + @Limit)";

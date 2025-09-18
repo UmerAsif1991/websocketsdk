@@ -1,0 +1,233 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TMS - The Right Guards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../login/assets/image/favicon-16x16.png">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" href="../logins/css/base.css">
+    <link href="../logins/assets/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../logins/particles-assets/css/style.css">
+    @*
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">*@
+    @*
+        <link href="../login/assets/css/font-awesome.css" rel="stylesheet" />*@
+    <style>
+        .li-search {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 8px;
+            font-size: 18px;
+            color: black;
+            display: block;
+            cursor: pointer;
+        }
+
+            .li-search:hover {
+                background-color: #eee;
+            }
+
+        .opt-icon {
+            margin-top: 30px;
+            margin-bottom: 20px
+        }
+
+        .card-block {
+            width: 215px;
+            border: 1px solid lightgrey;
+            border-radius: 5px !important;
+            background-color: #FAFAFA;
+            margin-bottom: 30px
+        }
+
+        .radio {
+            display: inline-block;
+            border-radius: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            color: #000;
+            font-weight: 500;
+            opacity: 0.6;
+        }
+
+            .radio.selected {
+                box-shadow: 0px 8px 16px 0px #EEEEEE;
+                opacity: 1;
+            }
+
+            .radio:hover {
+                background-color: #d7f5e8;
+                opacity: 1;
+            }
+
+        .selected {
+            background-color: #e0f2ea;
+        }
+    </style>
+</head>
+<body id="backgroundBody" style="overflow: hidden;">
+
+    <div class="app-container app-theme-white body-tabs-shadow">
+        <div class="app-container">
+            <div class="h-100">
+                <div class="h-100 no-gutters row">
+                    <div class="d-none d-lg-block col-lg-9">
+                        <div id="particles"></div>
+                    </div>
+                    <div class="h-100 d-flex bg-white justify-content-center align-items-center col-md-12 col-lg-3">
+                        <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-11">
+                            <div class="app-logo"></div>
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPTS INCLUDES-->
+    <!--CORE-->
+    <script src="../login/assets/js/scripts-init/jquery-3.3.1.min.js"></script>
+    <script src="../login/assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../login/assets/js/scripts-init/metismenu.js"></script>
+    <script src="../logins/js/app.js"></script>
+    <script src="../logins/js/demo.js"></script>
+    <!--Slick Carousel -->
+    <script src='../logins/js/TweenMax.min.js'></script>
+    <script src='../logins/js/react.min.js'></script>
+    <script src='../logins/js/react-dom.min.js'></script>
+    <script src="../logins/particles-assets/js/script.js"></script>
+    <script src="../logins/js/carousel-slider.js"></script>
+    <script src="../logins/js/init/carousel-slider.js"></script>
+    @*
+        <script src="../login/assets/js/jQuery-2.2.0.min.js"></script>
+        <script src="../logins/jquery.min.js"></script>*@
+    <script src="../logins/index.js"></script>
+
+    <script src="../login/assets/sweetalert/sweetalert.min.js"></script>
+    <script src="../login/assets/sweetalert/dialogs.js"></script>
+    <script>
+        $(".toggle-password").click(function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var x = document.getElementById("PassWordLogin");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        });
+        $(document).ready(function () {
+
+            //typing(0, $('.typewriter-text').data('text'));
+
+            function typing(index, text) {
+
+                var textIndex = 1;
+
+                var tmp = setInterval(function () {
+                    if (textIndex < text[index].length + 1) {
+                        $('.typewriter-text').text(text[index].substr(0, textIndex));
+                        textIndex++;
+                    } else {
+                        setTimeout(function () { deleting(index, text) }, 300);
+                        clearInterval(tmp);
+                    }
+
+                }, 150);
+
+            }
+
+            function deleting(index, text) {
+
+                var textIndex = text[index].length;
+
+                var tmp = setInterval(function () {
+
+                    if (textIndex + 1 > 0) {
+                        $('.typewriter-text').text(text[index].substr(0, textIndex));
+                        textIndex--;
+                    } else {
+                        index++;
+                        if (index == text.length) { index = 0; }
+                        typing(index, text);
+                        clearInterval(tmp);
+                    }
+
+                }, 30)
+
+            }
+        });
+
+        $(document).ready(function () {
+            var current = 1;
+
+            widget = $(".step");
+            btnnext = $(".next");
+            btnback = $(".back");
+            btnsubmit = $(".submit");
+
+            // Init buttons and UI
+            widget.not(':eq(0)').hide();
+            hideButtons(current);
+            setProgress(current);
+
+            // Next button click action
+            btnnext.click(function () {
+                if (current < widget.length) {
+                    widget.show();
+                    widget.not(':eq(' + (current++) + ')').hide();
+                    setProgress(current);
+                    //alert("I was called from btnNext");
+                }
+                hideButtons(current);
+            });
+
+            // Back button click action
+            btnback.click(function () {
+                if (current > 1) {
+                    current = current - 2;
+                    btnnext.trigger('click');
+                }
+                hideButtons(current);
+            });
+        });
+
+        // Change progress bar action
+        setProgress = function (currstep) {
+            var percent = parseFloat(100 / widget.length) * currstep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+                .css("width", percent + "%")
+                .html(percent + "%");
+        }
+
+        // Hide buttons according to the current step
+        hideButtons = function (current) {
+            var limit = parseInt(widget.length);
+
+            $(".action").hide();
+
+            if (current < limit) btnnext.show();
+            if (current > 1) btnback.show();
+            if (current == limit) { btnnext.hide(); btnsubmit.show(); }
+        }
+    </script>
+
+    @Html.Raw(ViewBag.ErrorMessage)
+
+</body>
+</html>
+
