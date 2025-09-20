@@ -12,5 +12,6 @@ namespace Qiandao.Model.Entity
         public string? ImagePath { get; set; }
 
         public string? Signatures { get; set; }
+        public int? TenantId { get; set; }
     }
 }

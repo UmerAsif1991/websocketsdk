@@ -167,7 +167,7 @@ namespace Qiandao.Web.WebSocketHandler
                         await GetDeviceInfo(jsonNode, deviceService, clientIp, clientPort);
                         break;
                     case "sendlog":
-                        GetAttendance(jsonNode, recordService, clientIp, clientPort);
+                        GetAttendance(jsonNode, recordService,personService, clientIp, clientPort);
                         break;
                     case "sendqrcode":
                         var qrcodeResponse = "{\"ret\":\"sendqrcode\",\"result\":true,\"access\":1,\"enrollid\":10,\"username\":\"test\"}";
@@ -192,10 +192,10 @@ namespace Qiandao.Web.WebSocketHandler
                         await UpdateCommandStatus(jsonNode, "setuserinfo", machine_commandService);
                         break;
                     case "getalllog":
-                         GetAllLog(jsonNode, machine_commandService, recordService, clientIp, clientPort);
+                         GetAllLog(jsonNode, machine_commandService, recordService, personService, clientIp, clientPort);
                         break;
                     case "getnewlog":
-                        GetNewLog(jsonNode,  machine_commandService, recordService, clientIp,
+                        GetNewLog(jsonNode,  machine_commandService, recordService, personService, clientIp,
                                     clientPort);
                         break;
                     case "deleteuser":
@@ -345,7 +345,7 @@ namespace Qiandao.Web.WebSocketHandler
         }
      
 
-        public async void GetAttendance(JObject jsonNode, RecordService recordService, string clientIp,
+        public async void GetAttendance(JObject jsonNode, RecordService recordService,PersonService personService, string clientIp,
                                    int clientPort)
         {
             var sn = jsonNode.Value<string>("sn"); 
@@ -354,6 +354,9 @@ namespace Qiandao.Web.WebSocketHandler
             List<Record> recordAll = new List<Record>();
             DeviceStatus deviceStatus = new DeviceStatus();
             bool flag = false;
+
+            int tenantId = personService.GetTenantFromDeviceSerial(sn);
+
             WebSocketSharp.WebSocket webSocket = Context.WebSocket;
             if (count > 0)
             {
@@ -448,7 +451,7 @@ namespace Qiandao.Web.WebSocketHandler
                 {
                     if (record != null)
                     {
-                      await  recordService.Insert(record);
+                      await  recordService.Insert(record,tenantId);
                     }
                 }
             }
@@ -469,7 +472,10 @@ namespace Qiandao.Web.WebSocketHandler
                                    int clientPort)
         {
             // 创建日期格式化器
-               var sn = jsonNode.Value<string>("sn");
+            var sn = jsonNode.Value<string>("sn");
+
+            int tenantId = personService.GetTenantFromDeviceSerial(sn);
+
             var signatures1 = jsonNode.Value<string>("record");
             bool flag = false;
             DeviceStatus deviceStatus = new DeviceStatus();
@@ -499,11 +505,12 @@ namespace Qiandao.Web.WebSocketHandler
                 {
                     Id = enrollId,
                     Name = name,
-                    Roll_id = rollId
+                    Roll_id = rollId,
+                    TenantId = tenantId
                 };
-                personService.SaveTMSUser(name,enrollId.ToString());
+                personService.SaveTMSUser(name,enrollId.ToString(),tenantId);
 
-                if (personService.SelectByPrimaryKey(enrollId) == null)
+                if (personService.SelectByPrimaryKey(enrollId, tenantId) == null)
                 {
                      personService.AddPersonAsync(person);
                 }
@@ -512,7 +519,8 @@ namespace Qiandao.Web.WebSocketHandler
                 {
                     Enroll_id = enrollId,
                     Backupnum = backupnum,
-                    Signatures = signatures
+                    Signatures = signatures,
+                    TenantId = tenantId
                 };
                 if (signatures.IsNullOrEmpty())
                 {
@@ -528,7 +536,7 @@ namespace Qiandao.Web.WebSocketHandler
                     }
                 }
 
-                Enrollinfo existingEnrollInfo = enrollinfoService.SelectByBackupnum(enrollId, backupnum);
+                Enrollinfo existingEnrollInfo = enrollinfoService.SelectByBackupnum(enrollId, backupnum, tenantId);
                 if (existingEnrollInfo == null)
                 {
                  await enrollinfoService.Insert(enrollInfo);
@@ -553,7 +561,10 @@ namespace Qiandao.Web.WebSocketHandler
             var result = jsonNode.Value<bool>("result");
             int count;
             JToken records = jsonNode.Value<JArray>("record"); 
-            var sn = jsonNode.Value<string>("sn"); 
+            var sn = jsonNode.Value<string>("sn");
+
+            int tenantId = personService.GetTenantFromDeviceSerial(sn);
+
             DeviceStatus deviceStatus = new DeviceStatus();
             WebSocketSharp.WebSocket webSocket = Context.WebSocket;
             if (result)
@@ -572,17 +583,19 @@ namespace Qiandao.Web.WebSocketHandler
                             admin = admin,
                             backupnum = backupnum
                         };
-                        if (personService.SelectByPrimaryKey(userTemp.enrollId).Result == null)
+
+                        if (personService.SelectByPrimaryKey(userTemp.enrollId,tenantId).Result == null)
                         {
                             Person personTemp = new Person
                             {
                                 Id = userTemp.enrollId,
                                 Name = "",
-                                Roll_id = userTemp.admin
+                                Roll_id = userTemp.admin,
+                                TenantId = tenantId
                             };
                             personService.AddPersonAsync(personTemp);
                         }
-                        if (enrollInfoService.SelectByBackupnum(userTemp.enrollId, userTemp.backupnum) == null)
+                        if (enrollInfoService.SelectByBackupnum(userTemp.enrollId, userTemp.backupnum, tenantId) == null)
                         {
                             Enrollinfo enrollInfo = new Enrollinfo
                             {
@@ -590,6 +603,7 @@ namespace Qiandao.Web.WebSocketHandler
                                 Backupnum = userTemp.backupnum,
                                 ImagePath="",
                                 Signatures="",
+                                TenantId=tenantId
                          
                             };
                           await  enrollInfoService.Insert(enrollInfo);
@@ -618,6 +632,8 @@ namespace Qiandao.Web.WebSocketHandler
             var result = jsonNode.Value<bool>("result");
             var sn = jsonNode.Value<string>("sn");
 
+            int tenantId = personService.GetTenantFromDeviceSerial(sn);
+
             bool flag = false;
             if (result)
             {
@@ -632,13 +648,14 @@ namespace Qiandao.Web.WebSocketHandler
                 {
                     Id = enrollId,
                     Name = name,
-                    Roll_id = admin
+                    Roll_id = admin,
+                    TenantId = tenantId
                 };
                 
                 if (signatures.IsNullOrEmpty()) {
                     return;
                 }
-                var enrollInfo = enrollinfoService.SelectByBackupnum(enrollId, backupnum);
+                var enrollInfo = enrollinfoService.SelectByBackupnum(enrollId, backupnum, tenantId);
                 if (backupnum == 50)
                 {
                     var picName = Guid.NewGuid().ToString();
@@ -649,7 +666,7 @@ namespace Qiandao.Web.WebSocketHandler
                     }
                 }
 
-                if (personService.SelectByPrimaryKey(enrollId).Result == null)
+                if (personService.SelectByPrimaryKey(enrollId,tenantId).Result == null)
                 {
                     personService.AddPerson(person);
                 }
@@ -664,7 +681,8 @@ namespace Qiandao.Web.WebSocketHandler
                         Enroll_id = enrollId,
                         Backupnum = backupnum,
                         ImagePath = enrollInfo?.ImagePath,
-                        Signatures = signatures
+                        Signatures = signatures,
+                        TenantId = tenantId
                     };
                  await   enrollinfoService.Insert(enrollinfo);
                 }
@@ -694,12 +712,15 @@ namespace Qiandao.Web.WebSocketHandler
             }
         }
         //	// 获取全部打卡记录
-        private async void GetAllLog(JToken jsonNode, Machine_commandService machine_commandService, RecordService recordsService, string clientIp,
+        private async void GetAllLog(JToken jsonNode, Machine_commandService machine_commandService, RecordService recordsService, PersonService personService, string clientIp,
                                    int clientPort)
         {
             var result = jsonNode.Value<bool>("result");
             var recordAll = new List<Record>();
             var sn = jsonNode.Value<string>("sn");
+
+            int tenantId = personService.GetTenantFromDeviceSerial(sn);
+
             if (!sn.IsNullOrEmpty())
             {
                 var records = jsonNode["record"];
@@ -761,7 +782,7 @@ namespace Qiandao.Web.WebSocketHandler
                 //}
                 foreach (var recordTemp in recordAll)
                 {
-                  await  recordsService.Insert(recordTemp);
+                  await  recordsService.Insert(recordTemp, tenantId);
                 }
                 if (sn != null)
                 {
@@ -770,7 +791,7 @@ namespace Qiandao.Web.WebSocketHandler
             }
         }
         // 获取全部打卡记录
-        private async void GetNewLog(JToken jsonNode,  Machine_commandService machine_commandService, RecordService recordsService, string clientIp,
+        private async void GetNewLog(JToken jsonNode,  Machine_commandService machine_commandService, RecordService recordsService, PersonService personService , string clientIp,
                                    int clientPort)
         {
             var result = jsonNode.Value<bool>("result");
@@ -779,6 +800,9 @@ namespace Qiandao.Web.WebSocketHandler
             var records = jsonNode["record"];
             var deviceStatus = new DeviceStatus();
             int count;
+
+            int tenantId = personService.GetTenantFromDeviceSerial(sn);
+
             WebSocketSharp.WebSocket webSocket = Context.WebSocket;
             if (result)
             {
@@ -836,7 +860,7 @@ namespace Qiandao.Web.WebSocketHandler
             //}
             foreach (var recordTemp in recordAll)
             {
-             await recordsService.Insert(recordTemp);
+             await recordsService.Insert(recordTemp, tenantId);
             }
             if (sn != null)
             {

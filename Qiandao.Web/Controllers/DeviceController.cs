@@ -96,12 +96,13 @@ namespace Qiandao.Web.Controllers
         [HttpGet("deletePersonFromDevice")]
         public IActionResult DeletePersonFromDevice(int enrollId, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (personService == null)
             {
                 return BadRequest("personService service not initialized.");
             }
             // 假设有一个方法用于删除人员
-            ResponseModel model = personService.DeleteUserInfoFromDevice(enrollId, deviceSn);
+            ResponseModel model = personService.DeleteUserInfoFromDevice(enrollId, deviceSn, tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "delete success" });
@@ -115,12 +116,13 @@ namespace Qiandao.Web.Controllers
         [HttpGet("sendGetUserInfo")]
         public IActionResult sendGetUserInfo(int enrollId, int backupNum, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (this.deviceServer == null)
             {
                 return BadRequest("deviceServer service not initialized.");
             }
             // 假设有一个方法用于删除人员
-            ResponseModel model = this.deviceServer.addGetOneUserCommand(enrollId, backupNum, deviceSn);
+            ResponseModel model = this.deviceServer.addGetOneUserCommand(enrollId, backupNum, deviceSn,tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "down success" });
@@ -133,6 +135,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("sendWs")]
         public async Task<IActionResult> sendWs(string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (deviceServer == null)
             {
                 return BadRequest("deviceServer service not initialized.");
@@ -150,11 +153,12 @@ namespace Qiandao.Web.Controllers
         [HttpGet("getUserInfo")]
         public async  Task<IActionResult> getUserInfo(string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (personService == null)
             {
                 return BadRequest("personService service not initialized.");
             }
-           ResponseModel model =await personService.getUserInfo(deviceSn);
+           ResponseModel model =await personService.getUserInfo(deviceSn, tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "success" });
@@ -168,11 +172,12 @@ namespace Qiandao.Web.Controllers
         [HttpGet("setPersonToDevice")]
         public IActionResult setPersonToDevice(string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (personService == null)
             {
                 return BadRequest("personService service not initialized.");
             }
-            personService.setUserToDevice2(deviceSn);
+            personService.setUserToDevice2(deviceSn,tenantId);
                 return Ok(new { code = 0, msg = "success" });
            
         }
@@ -217,11 +222,12 @@ namespace Qiandao.Web.Controllers
         [HttpGet("accessDays")]
         public async Task<IActionResult> accessDays()
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (access_dayService == null)
             {
                 return BadRequest("access_dayService service not initialized.");
             }
-            ResponseModel model =await access_dayService.Getaccess_dayList();
+            ResponseModel model =await access_dayService.Getaccess_dayList(tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "success", accessdays = model.Data });
@@ -252,6 +258,7 @@ namespace Qiandao.Web.Controllers
         [HttpPost("setAccessDay")]
         public async Task<IActionResult> setAccessDay([FromBody] Model.Request.Addaccess_day accessDay, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (accessDay == null)
             {
                 return BadRequest("Access_day  is null.");
@@ -270,7 +277,7 @@ namespace Qiandao.Web.Controllers
             }
             else
             {
-                access_dayService.Addaccess_day(accessDay);
+                access_dayService.Addaccess_day(accessDay,tenantId);
             }
 
             ResponseModel deviceModel =await deviceServer.GetdeviceallList(deviceSn);
@@ -279,7 +286,7 @@ namespace Qiandao.Web.Controllers
                 List<Device> deviceList = deviceModel.Data;
                 if (deviceList != null)
                 {
-                    ResponseModel model = await access_dayService.SetAccessDay(deviceList);
+                    ResponseModel model = await access_dayService.SetAccessDay(deviceList,tenantId);
                     if (model.Code == 200)
                     {
                         return Ok(new { code = 0, msg = "success", Data = model.Data });
@@ -302,7 +309,7 @@ namespace Qiandao.Web.Controllers
         [HttpPost("setAccessWeek")]
         public async Task<IActionResult> setAccessWeek([FromBody] Addaccess_week accessWeek, string deviceSn)
         {
-
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (accessWeekService == null)
             {
                 return BadRequest("accessWeekService service not initialized.");
@@ -317,7 +324,7 @@ namespace Qiandao.Web.Controllers
             }
             else
             {
-                accessWeekService.Addaccess_week(accessWeek);
+                accessWeekService.Addaccess_week(accessWeek,tenantId);
             }
                 ResponseModel deviceModel = await deviceServer.GetdeviceallList(deviceSn);
                 if (deviceModel.Data != null)
@@ -325,7 +332,7 @@ namespace Qiandao.Web.Controllers
                     List<Device> deviceList = deviceModel.Data;
                     if (deviceList != null)
                     {
-                        ResponseModel model = await accessWeekService.SetAccessWeek(deviceList);
+                        ResponseModel model = await accessWeekService.SetAccessWeek(deviceList,tenantId);
                         if (model.Code == 200)
                         {
                             return Ok(new { code = 0, msg = "success", Data = model.Data });
@@ -349,6 +356,7 @@ namespace Qiandao.Web.Controllers
         [HttpPost("setLocckGroup")]
         public async Task<IActionResult> setLocckGroup([FromBody] LockGroup lockGroup, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (deviceServer == null)
             {
                 return BadRequest("deviceServer service not initialized.");
@@ -363,7 +371,7 @@ namespace Qiandao.Web.Controllers
                 List<Device> deviceList = deviceModel.Data;
                 if (deviceList != null)
                 {
-                    ResponseModel model = enrollinfoService.SetLockGroup(lockGroup, deviceList);
+                    ResponseModel model = enrollinfoService.SetLockGroup(lockGroup, deviceList, tenantId);
                     if (model.Code == 200)
                     {
                         return Ok(new { code = 0, msg = "success" });
@@ -386,6 +394,7 @@ namespace Qiandao.Web.Controllers
         [HttpPost("setUserLock")]
         public async Task<IActionResult> setUserLock([FromBody] UserLock userLock, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (deviceServer == null)
             {
                 return BadRequest("deviceServer service not initialized.");
@@ -400,7 +409,7 @@ namespace Qiandao.Web.Controllers
                 List<Device> deviceList = deviceModel.Data;
                 if (deviceList != null)
                 {
-                    ResponseModel model = enrollinfoService.SetUserLock(userLock, deviceList);
+                    ResponseModel model = enrollinfoService.SetUserLock(userLock, deviceList, tenantId);
                     if (model.Code == 200)
                     {
                         return Ok(new { code = 0, msg = "success" });
@@ -424,6 +433,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("getDeviceInfo")]
         public IActionResult getDeviceInfo(string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (deviceSn == null)
             {
                 return BadRequest("deviceSn not initialized.");
@@ -432,7 +442,7 @@ namespace Qiandao.Web.Controllers
             {
                 return BadRequest("enrollinfoService Server not initialized.");
             }
-            ResponseModel model = enrollinfoService.GetDeviceInfo(deviceSn);
+            ResponseModel model = enrollinfoService.GetDeviceInfo(deviceSn,tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "success" });
@@ -445,6 +455,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("openDoor")]
         public IActionResult openDoor(int doorNum, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (doorNum == 0)
             {
                 return BadRequest("doorNum not initialized.");
@@ -471,6 +482,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("getDevLock")]
         public IActionResult getDevLock(string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (deviceSn == null)
             {
                 return BadRequest("deviceSn not initialized.");
@@ -479,7 +491,7 @@ namespace Qiandao.Web.Controllers
             {
                 return BadRequest("enrollinfoService Server not initialized.");
             }
-            ResponseModel model = enrollinfoService.getDevLock(deviceSn);
+            ResponseModel model = enrollinfoService.getDevLock(deviceSn, tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "success" });
@@ -492,6 +504,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("geUSerLock")]
         public IActionResult getUSerLock(int enrollId, string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (enrollId == 0)
             {
                 return BadRequest("doorNum not initialized.");
@@ -504,7 +517,7 @@ namespace Qiandao.Web.Controllers
             {
                 return BadRequest("enrollinfoService server not initialized.");
             }
-            ResponseModel model = enrollinfoService.getUSerLock(enrollId, deviceSn);
+            ResponseModel model = enrollinfoService.getUSerLock(enrollId, deviceSn, tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "success" });
@@ -517,6 +530,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("cleanAdmin")]
         public IActionResult cleanAdmin(string deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (deviceSn == null)
             {
                 return BadRequest("deviceSn not initialized.");
@@ -576,11 +590,12 @@ namespace Qiandao.Web.Controllers
         [HttpGet("testrecords")]
         public IActionResult testrecords()
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (recordService == null)
             {
                 return BadRequest("recordService server not initialized.");
             }
-            var res = recordService.InsertEmployeeAttendanceLog("5519", DateTime.Now, "AYSJ14002368");
+            var res = recordService.InsertEmployeeAttendanceLog("5519", DateTime.Now, "AYSJ14002368",tenantId);
 
             return Ok(new { code = 0, msg = "Success", data = "", count = 1 });
         }
@@ -605,6 +620,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("getNewLog")]
         public IActionResult getNewLog(string? deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (enrollinfoService == null)
             {
                 return BadRequest("enrollinfoService server not initialized.");
@@ -626,6 +642,7 @@ namespace Qiandao.Web.Controllers
         [HttpGet("collectLog")]
         public IActionResult collectLog(string? deviceSn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (enrollinfoService == null)
             {
                 return BadRequest("enrollinfoService server not initialized.");
@@ -634,7 +651,7 @@ namespace Qiandao.Web.Controllers
             {
                 return BadRequest("deviceSn not initialized.");
             }
-            ResponseModel model = enrollinfoService.collectLog(deviceSn);
+            ResponseModel model = enrollinfoService.collectLog(deviceSn,tenantId);
             if (model.Code == 200)
             {
                 return Ok(new { code = 0, msg = "Success" });
@@ -650,7 +667,8 @@ namespace Qiandao.Web.Controllers
         [HttpGet("cleanAllDBCommands")]
         public IActionResult cleanAllDBCommands()
         {
-            ResponseModel en = deviceServer.CleanAllDBCommands();
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
+            ResponseModel en = deviceServer.CleanAllDBCommands(tenantId);
             if (en.Code == 200)
             {
                 return Ok(new { code = 0, msg = "Success" });

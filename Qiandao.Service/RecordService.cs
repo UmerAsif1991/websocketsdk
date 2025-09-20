@@ -169,7 +169,7 @@ namespace Qiandao.Service
                 return (i > 0);
             }
         }
-        public async Task<ResponseModel> Insert(Record record)
+        public async Task<ResponseModel> Insert(Record record, int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
@@ -203,7 +203,7 @@ namespace Qiandao.Service
                 sql += values + ")";
 
                 int i = _db.Database.ExecuteSqlRaw(sql, parameters.ToArray());
-                InsertEmployeeAttendanceLog(record.Enroll_id.ToString(),record.Records_time,record.Device_serial_num);
+                InsertEmployeeAttendanceLog(record.Enroll_id.ToString(),record.Records_time,record.Device_serial_num,tenantId);
                 semaphore.Release();  // 释放信号量
 
                 if (i > 0)
@@ -212,7 +212,7 @@ namespace Qiandao.Service
             }
         }
 
-        public long InsertEmployeeAttendanceLog(string userId, DateTime? date, string deviceSerial)
+        public long InsertEmployeeAttendanceLog(string userId, DateTime? date, string deviceSerial, int tenantId)
         {
             var resultParam = new SqlParameter("@Result", SqlDbType.BigInt)
             {
@@ -222,6 +222,7 @@ namespace Qiandao.Service
             _hrmdb.Database.ExecuteSqlRaw(
                 @"EXEC dbo.UpdateEmployeeAttendance 
                     @userId = @userId,
+                    @TenantId = @TenantId,
                     @date = @date,
                     @checkTime = @checkTime,
                     @machineAttendanceType = @machineAttendanceType,
@@ -229,6 +230,7 @@ namespace Qiandao.Service
                     @deviceSerial = @deviceSerial,
                     @Result = @Result OUTPUT",
                 new SqlParameter("@userId", userId),
+                new SqlParameter("@TenantId", tenantId),
                 new SqlParameter("@date", date),
                 new SqlParameter("@checkTime", date?.TimeOfDay ?? TimeSpan.Zero),
                 new SqlParameter("@machineAttendanceType", 3),

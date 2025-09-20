@@ -22,5 +22,6 @@ namespace Qiandao.Model.Entity
         public  int? Saturday { get; set; }
 
         public  int? Sunday { get; set; }
+        public  int? TenantId { get; set; }
     }
 }

@@ -45,9 +45,9 @@ namespace Qiandao.Service
                 return new OkObjectResult(response);
             }
         }
-        public void DeletePersonIfExists(long id)
+        public void DeletePersonIfExists(long id, int tenantId)
         {
-            var person = _db.person.FirstOrDefault(a => a.Id == id);
+            var person = _db.person.FirstOrDefault(a => a.Id == id && a.TenantId == tenantId);
             if (person != null) _db.Remove(person);
             _db.SaveChanges();
         }
@@ -65,7 +65,7 @@ namespace Qiandao.Service
                         if (rowsAffected > 0)
                         {
 
-                            SaveTMSUser(aperson.Name, aperson.Id.ToString());
+                            SaveTMSUser(aperson.Name, aperson.Id.ToString(),aperson.TenantId);
 
 
                             transaction.Commit();
@@ -85,8 +85,14 @@ namespace Qiandao.Service
             }
         }
 
+        public int GetTenantFromDeviceSerial(string serialNum)
+        {
+            int tenantId = 0;
+            tenantId = _db.device.Where(a => a.Serial_num == serialNum).Select(a => a.TenantId).FirstOrDefault();
+            return tenantId;
+        }
 
-        public bool SaveTMSUser(string Name, string EmpNumber)
+        public bool SaveTMSUser(string Name, string EmpNumber, int tenantId)
         {
             string sql = @"
                 IF NOT EXISTS (SELECT 1 FROM Employee WHERE EmpNumber = @EmpNumber)
@@ -98,7 +104,8 @@ namespace Qiandao.Service
             var parameters = new List<SqlParameter> 
                 {
                     new SqlParameter("@Name", Name),
-                    new SqlParameter("@EmpNumber", EmpNumber)
+                    new SqlParameter("@EmpNumber", EmpNumber),
+                    new SqlParameter("@TenantId", tenantId)
                 };
 
             // 执行更新操作
@@ -154,12 +161,12 @@ namespace Qiandao.Service
         /// <summary>
         /// 
         /// </summary>
-        public async Task<ResponseModel> GetPersonallList()
+        public async Task<ResponseModel> GetPersonallList(int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
                 await semaphore.WaitAsync();  // 异步等待
-                var query = _db.Database.SqlQueryRaw<Person>(@"SELECT * FROM person");
+                var query = _db.Database.SqlQueryRaw<Person>($@"SELECT * FROM person where tenantId = {tenantId}");
                 if (query == null)
                 {
                     return new ResponseModel();
@@ -214,12 +221,12 @@ namespace Qiandao.Service
         }
 
 
-        public async Task<Person> SelectByPrimaryKey(long id)
+        public async Task<Person> SelectByPrimaryKey(long id, int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
                 await semaphore.WaitAsync();  // 异步等待
-                var sqlQuery = $@"SELECT * FROM Person WHERE id = @id";
+                var sqlQuery = $@"SELECT * FROM Person WHERE id = @id and tenantId = {tenantId}";
                 var parameters = new SqlParameter[]
                 {
                 new SqlParameter("@id", id)
@@ -324,7 +331,7 @@ namespace Qiandao.Service
         }
 
 
-        public ResponseModel DeleteUserInfoFromDevice(int enrollId, string deviceSn)
+        public ResponseModel DeleteUserInfoFromDevice(int enrollId, string deviceSn, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -352,8 +359,7 @@ namespace Qiandao.Service
 
                         if (rowsAffected > 0)
                         {
-                            // 根据业务需求选择合适的删除方法
-                            DeletePersonByEnrollId(enrollId);
+                            DeletePersonByEnrollId(enrollId, tenantId);
 
                             transaction.Commit();
                             return new ResponseModel { Code = 200, Result = "Delete success" };
@@ -372,22 +378,31 @@ namespace Qiandao.Service
             }
         }
 
-        public void DeletePersonByEnrollId(int id)
+        public void DeletePersonByEnrollId(int id, int tenantId)
         {
-            lock (_lockObject)  // 确保同一时间只有一个线程访问
+            lock (_lockObject) 
             {
-                _db.Database.ExecuteSqlRaw("DELETE FROM Person WHERE id = @id", new SqlParameter("@id", id));
-                _db.Database.ExecuteSqlRaw("DELETE FROM Enrollinfo WHERE enroll_id = @id", new SqlParameter("@id", id));
+                _db.Database.ExecuteSqlRaw(
+                    "DELETE FROM Person WHERE id = @id AND tenantId = @tenantId",
+                    new SqlParameter("@id", id),
+                    new SqlParameter("@tenantId", tenantId)
+                );
+
+                _db.Database.ExecuteSqlRaw(
+                    "DELETE FROM Enrollinfo WHERE enroll_id = @id AND tenantId = @tenantId",
+                    new SqlParameter("@id", id),
+                    new SqlParameter("@tenantId", tenantId)
+                );
             }
         }
        
-            public async Task<ResponseModel> getUserInfo(string deviceSn)
+            public async Task<ResponseModel> getUserInfo(string deviceSn, int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
                 await semaphore.WaitAsync();  // 异步等待
                                               // 获取设备列表
-                var response = await GetPersonallList();
+                var response = await GetPersonallList(tenantId);
             if (response == null || response.Data == null)
             {
                 return new ResponseModel { Code = 0, Result = "null" };
@@ -397,7 +412,7 @@ namespace Qiandao.Service
             foreach (var person in personList)
             {
                 var enrollId = person.Id;
-                var enrollResponse =await enrollinfoService.SelectEnrollallByIdAsync(enrollId);
+                var enrollResponse =await enrollinfoService.SelectEnrollallByIdAsync(enrollId,tenantId);
                 if ((enrollResponse != null) && (enrollResponse.Data != null))
                 {
                     var enrollInfos = enrollResponse.Data as List<Enrollinfo>;
@@ -449,12 +464,12 @@ namespace Qiandao.Service
             return new ResponseModel { Code = 200, Result = "Add success" };
         }
 
-        public async void setUserToDevice2(string deviceSn)
+        public async void setUserToDevice2(string deviceSn, int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
                 await semaphore.WaitAsync();  // 异步等待
-                ResponseModel pm = await GetPersonallList();
+                ResponseModel pm = await GetPersonallList(tenantId);
                 List<UserInfo> userInfos = await enrollinfoService.usersToSendDevice(pm);
                 DateTime dt = DateTime.Now;
                 for (int i = 0; i < userInfos.Count(); i++)

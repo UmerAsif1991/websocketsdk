@@ -8,6 +8,7 @@ namespace Qiandao.Model.Entity
         public required string Serial_num { get; set; }
 
         public required int Status { get; set; }
+        public required int TenantId { get; set; }
     }
 
     public class DeviceNew

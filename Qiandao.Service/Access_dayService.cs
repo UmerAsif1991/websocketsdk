@@ -27,21 +27,30 @@ namespace Qiandao.Service
         /// <summary>
         /// 添加每天签到
         /// </summary>
-        public ResponseModel Addaccess_day(Addaccess_day addaccess_day)
+        public ResponseModel Addaccess_day(Addaccess_day addaccess_day, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
-                var access_day = _mapper.Map<Access_day>(addaccess_day);
-                access_day.Id = addaccess_day.Id;
-                _db.access_day.Add(access_day);
-                int i = _db.SaveChanges();
-                if (i > 0)
+                try
                 {
-                    return new ResponseModel() { Code = 200, Result = "Success" };
+                    var access_day = _mapper.Map<Access_day>(addaccess_day);
+                    access_day.Id = addaccess_day.Id;
+                    access_day.TenantId = tenantId;
+                    _db.access_day.Add(access_day);
+                    int i = _db.SaveChanges();
+                    if (i > 0)
+                    {
+                        return new ResponseModel() { Code = 200, Result = "Success" };
+                    }
+                    else
+                    {
+                        return new ResponseModel() { Code = 0, Result = "Fail" };
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    return new ResponseModel() { Code = 0, Result = "Fail" };
+
+                    throw;
                 }
             }
         }
@@ -75,7 +84,7 @@ namespace Qiandao.Service
         /// <summary>
         /// 每天签到集合获取
         /// </summary>
-        public async Task<ResponseModel> Getaccess_dayList()
+        public async Task<ResponseModel> Getaccess_dayList(int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
@@ -101,7 +110,8 @@ namespace Qiandao.Service
                         end_time4 = comment.end_time4,
                         start_time5 = comment.start_time5,
                         end_time5 = comment.end_time5,
-                        Serial = comment.Serial
+                        Serial = comment.Serial,
+                        TenantId = tenantId
                     });
                 }
                 semaphore.Release();
@@ -126,10 +136,10 @@ namespace Qiandao.Service
                 return new ResponseModel { Code = 0, Result = "access_day delete fail" };
             }
         }
-        public async Task<ResponseModel> SetAccessDay(List<Device> deviceList)
+        public async Task<ResponseModel> SetAccessDay(List<Device> deviceList, int tenantId)
         {
             StringBuilder sb = new StringBuilder();
-            ResponseModel rm = await Getaccess_dayList();
+            ResponseModel rm = await Getaccess_dayList(tenantId);
             if (rm.Data != null)
             {
                 List<Access_day> accessDays = rm.Data;
@@ -156,6 +166,7 @@ namespace Qiandao.Service
                                 end_time4 = ad.end_time4,
                                 start_time5 = ad.start_time5,
                                 end_time5 = ad.end_time5,
+                                TenantId = tenantId
                             };
                             accessDaysTemp.Add(accessDay1);
                         }
@@ -173,7 +184,8 @@ namespace Qiandao.Service
                                 start_time4 = "00:00",
                                 end_time4 = "00:00",
                                 start_time5 = "00:00",
-                                end_time5 = "00:00"
+                                end_time5 = "00:00",
+                                TenantId = tenantId
                             };
                             accessDaysTemp.Add(accessDay1);
                         }

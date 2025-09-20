@@ -84,7 +84,8 @@ namespace Qiandao.Service
                     {
                         Id = comment.Id,
                         Serial_num = comment.Serial_num,
-                        Status = comment.Status
+                        Status = comment.Status,
+                        TenantId = comment.TenantId
                     });
                 }
                 responseModel.Code = 200;
@@ -116,7 +117,8 @@ namespace Qiandao.Service
                     {
                         Id = comment.Id,
                         Serial_num = comment.Serial_num,
-                        Status = comment.Status
+                        Status = comment.Status,
+                        TenantId = comment.TenantId
                     });
                 }
                 semaphore.Release();
@@ -149,7 +151,8 @@ namespace Qiandao.Service
                     {
                         Id = comment.Id,
                         Serial_num = comment.Serial_num,
-                        Status = comment.Status
+                        Status = comment.Status,
+                        TenantId = comment.TenantId
                     });
                 }
                 semaphore.Release();
@@ -182,7 +185,7 @@ namespace Qiandao.Service
                     foreach (var comment in queryResult)
                     {
                         // Get device information using the Serial_num
-                        ResponseModel deviceInfoResponse = GetDeviceInfo(comment.Serial_num);
+                        ResponseModel deviceInfoResponse = GetDeviceInfo(comment.Serial_num,TenantId);
 
                         // Update status with the result of the GetDeviceInfo method
                         int status = deviceInfoResponse.Result == "success" ? 1 : 0; // Replace based on your requirement
@@ -226,7 +229,7 @@ namespace Qiandao.Service
             }
         }
 
-        public ResponseModel GetDeviceInfo(string deviceSn)
+        public ResponseModel GetDeviceInfo(string deviceSn, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -269,7 +272,7 @@ namespace Qiandao.Service
                 }
             }
         }
-        public ResponseModel addGetOneUserCommand(int enrollId, int backupNum, string serialNum)
+        public ResponseModel addGetOneUserCommand(int enrollId, int backupNum, string serialNum, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -421,11 +424,11 @@ namespace Qiandao.Service
                 return new ResponseModel { Code = 0, Result = "device insert fail" };
             }
         }
-        public ResponseModel CleanAllDBCommands()
+        public ResponseModel CleanAllDBCommands(int tenantId)
         {
-            lock (_lockObject)  // 确保同一时间只有一个线程访问
+            lock (_lockObject)
             {
-                string sql = "delete from machine_command where [status] = 0";
+                string sql = $"delete from machine_command where [status] = 0 and tenantId = {tenantId}";
                 // 执行更新操作
                 int i = _db.Database.ExecuteSqlRaw(sql);
                 if (i > 0)

@@ -105,13 +105,14 @@ namespace Qiandao.Service
             }
         }
 
-        public async Task<ResponseModel> SelectEnrollallByIdAsync(long? enrollId)
+        public async Task<ResponseModel> SelectEnrollallByIdAsync(long? enrollId, int tenantId)
         {
             var query = _db.Database.SqlQueryRaw<Enrollinfo>(
-                @"SELECT id, enroll_id, backupnum, imagepath, signatures 
+                @"SELECT id, enroll_id, backupnum, imagepath, signatures , tenantId
                 FROM enrollinfo 
                 WHERE enroll_id = @enrollId",
-                new SqlParameter("@enrollId", enrollId)
+                new SqlParameter("@enrollId", enrollId),
+                new SqlParameter("@TenantId", tenantId)
             );
 
             if (query == null)
@@ -157,7 +158,7 @@ namespace Qiandao.Service
             {
                 await semaphore.WaitAsync();  // 异步等待
                 var query = _db.Database.SqlQueryRaw<Enrollinfo>(
-               @"SELECT id, enroll_id, backupnum, imagepath, signatures 
+               @"SELECT id, enroll_id, backupnum, imagepath, signatures , tenantId
                 FROM enrollinfo ");
 
                 if (query == null)
@@ -366,7 +367,7 @@ namespace Qiandao.Service
                 }
             }
         }
-        public ResponseModel SetLockGroup(LockGroup lockGroup, List<Device> deviceList)
+        public ResponseModel SetLockGroup(LockGroup lockGroup, List<Device> deviceList, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -428,7 +429,7 @@ namespace Qiandao.Service
                 }
             }
         }
-        public ResponseModel SetUserLock(UserLock userLock, List<Device> deviceList)
+        public ResponseModel SetUserLock(UserLock userLock, List<Device> deviceList, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -485,7 +486,7 @@ namespace Qiandao.Service
 
         }
 
-        public ResponseModel GetDeviceInfo(string deviceSn)
+        public ResponseModel GetDeviceInfo(string deviceSn,int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -573,7 +574,7 @@ namespace Qiandao.Service
                 }
             }
         }
-        public ResponseModel getDevLock(string deviceSn)
+        public ResponseModel getDevLock(string deviceSn, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -616,7 +617,7 @@ namespace Qiandao.Service
                 }
             }
         }
-        public ResponseModel getUSerLock(int enrollId, string deviceSn)
+        public ResponseModel getUSerLock(int enrollId, string deviceSn, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -746,7 +747,7 @@ namespace Qiandao.Service
                 }
             }
         }
-        public ResponseModel collectLog(string deviceSn)
+        public ResponseModel collectLog(string deviceSn,int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -790,7 +791,7 @@ namespace Qiandao.Service
         }
 
 
-        public Enrollinfo SelectByBackupnum(long enroll_id, int backupnum)
+        public Enrollinfo SelectByBackupnum(long enroll_id, int backupnum, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
@@ -800,9 +801,10 @@ namespace Qiandao.Service
                         @"
             SELECT id, enroll_id, backupnum, imagepath, signatures
             FROM enrollinfo
-            WHERE enroll_id = @enroll_id AND backupnum = @backupnum",
+            WHERE enroll_id = @enroll_id AND backupnum = @backupnum AND TenantId = @TenantId",
                         new SqlParameter("@enroll_id", enroll_id),
-                        new SqlParameter("@backupnum", backupnum));
+                        new SqlParameter("@backupnum", backupnum),
+                        new SqlParameter("@TenantId", tenantId));
 
                     var resultList = query.ToList();
 

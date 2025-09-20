@@ -28,5 +28,6 @@ namespace Qiandao.Model.Entity
         public required string start_time5 { get; set; }
 
         public required string end_time5 { get; set; }
+        public required int TenantId { get; set; }
     }
 }

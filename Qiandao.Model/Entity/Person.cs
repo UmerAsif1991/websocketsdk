@@ -8,5 +8,6 @@ namespace Qiandao.Model.Entity
         public required string Name { get; set; }
 
         public  int? Roll_id { get; set; }
+        public  int TenantId { get; set; }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Qiandao.Model.Entity;
-using Qiandao.Service;
 using Qiandao.Model.Response;
+using Qiandao.Service;
+using Qiandao.Web.Extensions;
 using Qiandao.Web.WebSocketHandler;
 
 
@@ -26,6 +27,7 @@ namespace Qiandao.Web.Controllers
         [HttpPost("addPerson")]
         public async Task<IActionResult>  AddPerson([FromForm]  PersonTemp personTemp, [FromForm] IFormFile? pic)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -65,15 +67,16 @@ namespace Qiandao.Web.Controllers
                 {
                     Id = personTemp.UserId,
                     Name = personTemp.Name,
-                    Roll_id = personTemp.Privilege
+                    Roll_id = personTemp.Privilege,
+                    TenantId = tenantId
                 };
 
-                var existingPerson =  _personService.SelectByPrimaryKey(personTemp.UserId);
+                var existingPerson =  _personService.SelectByPrimaryKey(personTemp.UserId,tenantId);
                 if (existingPerson.Result == null)
                 {
                      _personService.AddPersonAsync(p);
                 }
-                 SaveAdditionalInformation(personTemp, newName);
+                 SaveAdditionalInformation(personTemp, newName, tenantId);
 
                 var response = new Dictionary<string, object>
             {
@@ -95,6 +98,7 @@ namespace Qiandao.Web.Controllers
         [HttpPost("addRemoteUser")]
         public async Task<IActionResult> addRemoteUser([FromForm] PersonTemp personTemp, [FromForm] IFormFile? pic , string devicesn)
         {
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -134,12 +138,13 @@ namespace Qiandao.Web.Controllers
                 {
                     Id = personTemp.UserId,
                     Name = personTemp.Name,
-                    Roll_id = personTemp.Privilege
+                    Roll_id = personTemp.Privilege,
+                    TenantId = tenantId
                 };
 
-                _personService.DeletePersonIfExists(personTemp.UserId);
+                _personService.DeletePersonIfExists(personTemp.UserId, tenantId);
 
-                var existingPerson = _personService.SelectByPrimaryKey(personTemp.UserId);
+                var existingPerson = _personService.SelectByPrimaryKey(personTemp.UserId,tenantId);
                 if (existingPerson.Result == null)
                 {
                     _personService.AddRemoteUser(p , devicesn);
@@ -147,10 +152,10 @@ namespace Qiandao.Web.Controllers
               //  SaveAdditionalInformation(personTemp, newName);
 
                 var response = new Dictionary<string, object>
-            {
-                { "code", 0 },
-                { "msg", "success" }
-            };
+                {
+                    { "code", 0 },
+                    { "msg", "success" }
+                };
 
                 return Ok(response);
             }
@@ -179,7 +184,7 @@ namespace Qiandao.Web.Controllers
             return newName; 
         }
         
-        private void SaveAdditionalInformation(PersonTemp personTemp, string newName)
+        private void SaveAdditionalInformation(PersonTemp personTemp, string newName, int tenantId)
         {
             if (!string.IsNullOrEmpty(personTemp.Password))
             {
@@ -187,7 +192,8 @@ namespace Qiandao.Web.Controllers
                 {
                     Backupnum = 10,
                     Enroll_id = personTemp.UserId,
-                    Signatures = personTemp.Password
+                    Signatures = personTemp.Password,
+                    TenantId = tenantId
                 });
             }
 
@@ -197,8 +203,9 @@ namespace Qiandao.Web.Controllers
                 {
                     Backupnum = 11,
                     Enroll_id = personTemp.UserId,
-                    Signatures = personTemp.CardNum
-                });
+                    Signatures = personTemp.CardNum,
+                     TenantId = tenantId
+                 });
             }
 
             if (!string.IsNullOrEmpty(newName))
@@ -214,7 +221,8 @@ namespace Qiandao.Web.Controllers
                         Backupnum = 50,
                         Enroll_id = personTemp.UserId,
                         ImagePath = imagePath,
-                        Signatures = base64String
+                        Signatures = base64String,
+                        TenantId = tenantId
                     });
                 }
             }
@@ -224,7 +232,8 @@ namespace Qiandao.Web.Controllers
         [HttpGet("setUsernameToDevice")]
         public  async Task<IActionResult> setUsernameToDevice(string deviceSn)
         {
-          ResponseModel pm=await  _personService.GetPersonallList();
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
+            ResponseModel pm=await  _personService.GetPersonallList(tenantId);
             if (pm.Data == null) {
                 return BadRequest(new { code = 1, msg = "Fail" });
             }
@@ -242,7 +251,8 @@ namespace Qiandao.Web.Controllers
         [HttpGet("setSpecificUsernameToDevice")]
         public  async Task<IActionResult> setSpecificUsernameToDevice(string deviceSn, string userIds)
         {
-          ResponseModel pm=await  _personService.GetSpecificPersonallList(userIds);
+            int tenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
+            ResponseModel pm=await  _personService.GetSpecificPersonallList(userIds);
             if (pm.Data == null) {
                 return BadRequest(new { code = 1, msg = "Fail" });
             }
@@ -261,7 +271,6 @@ namespace Qiandao.Web.Controllers
         [HttpGet("initSystem")]
         public IActionResult initSystem(string deviceSn)
         {
-           
             ResponseModel en = _enrollInfoService.initSystem(deviceSn);
             if (en.Code == 200)
             {

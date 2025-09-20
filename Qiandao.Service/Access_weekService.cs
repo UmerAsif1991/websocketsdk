@@ -26,12 +26,13 @@ namespace Qiandao.Service
         /// <summary>
         /// 添加access_week
         /// </summary>
-        public ResponseModel Addaccess_week(Addaccess_week addaccess_week)
+        public ResponseModel Addaccess_week(Addaccess_week addaccess_week, int tenantId)
         {
             lock (_lockObject)  // 确保同一时间只有一个线程访问
             {
                 var access_week = _mapper.Map<Access_week>(addaccess_week);
                 access_week.Id = addaccess_week.Id;
+                access_week.TenantId = tenantId;
                 _db.access_week.Add(access_week);
                 int i = _db.SaveChanges();
                 if (i > 0)
@@ -79,12 +80,12 @@ namespace Qiandao.Service
         /// <summary>
         /// 每天签到集合获取
         /// </summary>
-        public async Task<ResponseModel> Getaccess_weekList()
+        public async Task<ResponseModel> Getaccess_weekList(int tenantId)
         {
             using (var semaphore = new SemaphoreSlim(1, 1))
             {
                 await semaphore.WaitAsync();  // 异步等待
-                var query = _db.Database.SqlQueryRaw<Access_week>(@"SELECT * FROM access_week");
+                var query = _db.Database.SqlQueryRaw<Access_week>($@"SELECT * FROM access_week where tenantId = {tenantId}");
                 // 执行查询并返回结果
                 var queryResult = query.ToList();
                 ResponseModel responseModel = new ResponseModel();
@@ -102,7 +103,8 @@ namespace Qiandao.Service
                         Friday = comment.Friday,
                         Sunday = comment.Sunday,
                         Wednesday = comment.Wednesday,
-                        Serial = comment.Serial
+                        Serial = comment.Serial,
+                        TenantId = tenantId
                     });
                 }
                 semaphore.Release();
@@ -145,11 +147,11 @@ namespace Qiandao.Service
 
             }
         }
-        public async Task<ResponseModel> SetAccessWeek(List<Device> deviceList)
+        public async Task<ResponseModel> SetAccessWeek(List<Device> deviceList, int tenantId)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("{\"cmd\":\"setdevlock\",\"weekzone\":[");
-            ResponseModel rm = await Getaccess_weekList();
+            ResponseModel rm = await Getaccess_weekList(tenantId);
             if (rm.Data == null)
             {
                 return new ResponseModel
@@ -200,6 +202,7 @@ namespace Qiandao.Service
                             Friday = aw.Friday,
                             Saturday = aw.Saturday,
                             Sunday = aw.Sunday,
+                            TenantId = tenantId
                         };
                         accessWeeksTemp.Add(accessWeek);
                     }
@@ -214,7 +217,8 @@ namespace Qiandao.Service
                             Thursday = 0,
                             Friday = 0,
                             Saturday = 0,
-                            Sunday = 0
+                            Sunday = 0,
+                            TenantId = tenantId
                         };
                         accessWeeksTemp.Add(accessWeek);
                     }
