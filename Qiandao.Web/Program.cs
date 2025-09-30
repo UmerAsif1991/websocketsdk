@@ -1,14 +1,16 @@
 ﻿
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Qiandao.Service;
+using Qiandao.Web.ActionFilters;
+using Qiandao.Web.Middlewares;
 using Qiandao.Web.WebSocketHandler;
-using System.Net;
-using WebSocketSharp.Server;
-using System;
 using Serilog;
 using Serilog.Events;
-using Microsoft.AspNetCore.Hosting;
+using System;
+using System.Net;
+using WebSocketSharp.Server;
 public class Program
 {
     public static async Task Main(string[] args)
@@ -51,13 +53,24 @@ public class Program
             builder.Services.AddSingleton<WebSocketHandler>();
             builder.Services.AddSingleton<ServerManager>();
 
+            //builder.Services.AddControllersWithViews(options =>
+            //{
+            //    options.Filters.Add<SessionExpireFilter>();
+            //});
+
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // session timeout
+                options.IdleTimeout = TimeSpan.FromMinutes(60); // session timeout
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+
+            //builder.Services.AddRazorPages(options =>
+            //{
+            //    options.Conventions.ConfigureFilter(new SessionExpirePageFilter());
+            //});
+
 
             // Use Serilog as the logging provider
             builder.Host.UseSerilog();
@@ -78,6 +91,8 @@ public class Program
             app.UseAuthorization();
 
             app.UseSession();
+
+            app.UseMiddleware<SessionValidationMiddleware>();
 
             // Configure routes
             app.MapControllers();

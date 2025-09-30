@@ -14,7 +14,7 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="stylesheet" href="../logins/css/base.css">
-    <link href="../logins/assets/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/logins/sweetalert/sweetalert.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../logins/particles-assets/css/style.css">
     @*
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">*@
@@ -99,9 +99,8 @@
 
     <!--SCRIPTS INCLUDES-->
     <!--CORE-->
-    <script src="../login/assets/js/scripts-init/jquery-3.3.1.min.js"></script>
-    <script src="../login/assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="../login/assets/js/scripts-init/metismenu.js"></script>
+    <script src="~/js/jquery-2.1.4.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
     <script src="../logins/js/app.js"></script>
     <script src="../logins/js/demo.js"></script>
     <!--Slick Carousel -->
@@ -111,13 +110,16 @@
     <script src="../logins/particles-assets/js/script.js"></script>
     <script src="../logins/js/carousel-slider.js"></script>
     <script src="../logins/js/init/carousel-slider.js"></script>
-    @*
-        <script src="../login/assets/js/jQuery-2.2.0.min.js"></script>
-        <script src="../logins/jquery.min.js"></script>*@
-    <script src="../logins/index.js"></script>
+    
+    <script src="~/logins/sweetalert/sweetalert.min.js"></script>
 
-    <script src="../login/assets/sweetalert/sweetalert.min.js"></script>
-    <script src="../login/assets/sweetalert/dialogs.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+
+    <script src="../logins/index.js"></script>
+    <script src="~/logins/js/Authenticationjs.js"></script>
+
     <script>
         $(".toggle-password").click(function () {
 

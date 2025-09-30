@@ -4,9 +4,23 @@
     Layout = "~/Views/_LoginLayout.cshtml";
 }
 
+
 <div class="divider row"></div>
 <div>
-    <form asp-action="Login" asp-controller="Authentication" asp-route-ReturnUrl="@ViewBag.ReturnUrl" method="post" class="form-horizontal" role="form">
+
+    @if (Context.Request.Query["sessionExpired"] == "true")
+    {
+        <div class="alert alert-warning">Your session has expired. Please log in again.</div>
+    }
+
+    <form asp-controller="Authentication"
+          asp-action="Login"
+          id="ItemForm"
+          autocomplete="off"
+          data-ajax="true"
+          data-ajax-method="POST"
+          data-ajax-begin="OnBegin()"
+          data-ajax-success="OnLoginSuccess(data)">
         <div class="form-row">
             <div class="col-md-12">
                 <div class="position-relative form-group">

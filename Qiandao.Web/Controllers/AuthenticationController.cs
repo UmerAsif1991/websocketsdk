@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using Qiandao.Model.Response;
 using Qiandao.Model.ViewModel;
 using Qiandao.Service;
+using Qiandao.Web.ActionFilters;
 using Qiandao.Web.Extensions;
 using System.Collections.Generic;
 using static System.Net.WebRequestMethods;
@@ -29,36 +30,33 @@ namespace Qiandao.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel objUser)
         {
+            ResponseModel rm = new ResponseModel();
             try
             {
-                ResponseModel rm = await _loginService.Login(objUser);
+                rm = await _loginService.Login(objUser);
 
-
-                if(rm.Code == 200)
+                if (rm.Code == 200 && rm.Data is not null)
                 {
-                    string dataJson = JsonConvert.SerializeObject(rm.Data);
-                    var dict = JsonConvert.DeserializeObject<Dictionary<string, object>>(dataJson);
+                    var dict = JsonConvert.DeserializeObject<Dictionary<string, object>>(
+                                  JsonConvert.SerializeObject(rm.Data));
 
-                    if (dict.TryGetValue("TenantId", out var tenantId))
+                    if (dict.TryGetValue("TenantId", out object tenantId))
                     {
-                        HttpContext.Session.SetObject("TenantId", tenantId?.ToString());
+                        HttpContext.Session.SetString("TenantId", tenantId?.ToString() ?? "");
                     }
-
-                    return RedirectToAction("Index", "Home");
                 }
-                else
-                {
-                    ViewBag.ErrorMessage = "Invalid User Name or Password";
-                    return View();
-                }
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ViewBag.ErrorMessage = " Error!!! contact cms@info.in";
-                return View();
+                rm.Code = 500;
+                rm.Result = "An error occurred during login.";
+                rm.Success = false;
+                // Optionally log exception
             }
+
+            return Json(rm);
         }
+
 
         public IActionResult Logout()
         {

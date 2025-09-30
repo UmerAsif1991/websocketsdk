@@ -39,6 +39,7 @@ namespace Qiandao.Service
                     return new ResponseModel
                     {
                         Code = 400,
+                        Success = false,
                         Result = "Invalid username or password"
                     };
                 }
@@ -46,6 +47,7 @@ namespace Qiandao.Service
                 return new ResponseModel
                 {
                     Code = 200,
+                    Success = true,
                     Result = "Login successful",
                     Data = new
                     {
@@ -63,6 +65,7 @@ namespace Qiandao.Service
                 return new ResponseModel
                 {
                     Code = 500,
+                    Success = false,
                     Result = $"Error: {ex.Message}"
                 };
             }

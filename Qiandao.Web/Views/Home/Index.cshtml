@@ -1,7 +1,11 @@
 ﻿@{
     ViewData["Title"] = "TRG - The Right Guards ®";
 }
+@* 
 
+i want to translate chineese language in this page
+
+ *@
 <!DOCTYPE html>
 <html>
 <head>
@@ -914,6 +918,7 @@
                             method: 'GET',
                             dataType: 'json',
                             success: function(response) {
+                                debugger;
                                 if (response && response.data) {
                                     let rm = response.data.allDevices; // All devices list (from rm)
                                     let rmActive = response.data.activeDevices; // Active devices list (from rmActive)

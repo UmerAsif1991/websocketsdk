@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Qiandao.Model.Entity;
 using Qiandao.Model.Request;
 using Qiandao.Model.Response;
@@ -22,6 +23,7 @@ namespace Qiandao.Web.Controllers
         private readonly Access_dayService? access_dayService;
         private readonly Access_weekService? accessWeekService;
         private readonly RecordService recordService;
+        private static Dictionary<string, DeviceStatus> _wdList => DeviceManager.GetInstance();
         public DeviceController(ILogger<DeviceController> logger, DeviceService deviceServer, PersonService personService, EnrollinfoService enrollinfoService, Access_dayService? access_dayService, Access_weekService? accessWeekService, RecordService recordService)
         {
             _logger = logger;
@@ -60,22 +62,48 @@ namespace Qiandao.Web.Controllers
 
             int TenantId = Convert.ToInt32(HttpContext.Session.GetObject<string>("TenantId"));
             // Fetch the device lists using the deviceService methods
-            ResponseModel rm = await deviceServer.GetdeviceallListNew(TenantId);
-            ResponseModel rmActive = await deviceServer.GetdeviceallList(TenantId);
+            
+            ResponseModel response = await deviceServer.GetdeviceallListNew(TenantId);
+            ResponseModel ActiveResponse = new ResponseModel();
+            List<DeviceNew> listOfActiveDevices = new List<DeviceNew>();
+            //ResponseModel response = await deviceServer.GetdeviceallList(TenantId);
+
+            List<DeviceNew> listOfDevices =
+                            response?.Data != null
+                                ? JsonConvert.DeserializeObject<List<DeviceNew>>(JsonConvert.SerializeObject(response.Data))
+                                : new List<DeviceNew>();
+
+            foreach (var wsDevice in _wdList.Values)
+            {
+                var dbMatch = listOfDevices.FirstOrDefault(d =>
+                                string.Equals(d.Serial_num, wsDevice.deviceSn, StringComparison.OrdinalIgnoreCase));
+
+                if (dbMatch != null)
+                {
+                    listOfActiveDevices.Add(dbMatch);
+                }
+            }
+
+            ActiveResponse.Data = listOfActiveDevices;
+
+            //// Collect live devices from your websocket list
+            //var liveDevices = _wdList.Values
+            //    .Where(d => d.webSocket?.IsAlive == true)
+            //    .ToList();
 
             // Check if both responses are valid
-            if (rm.Code == 200 && rm.Data != null && rmActive.Code == 200 && rmActive.Data != null)
+            if (response.Code == 200 && response.Data != null)
             {
                 // Return both 'rm' and 'rmActive' in the response
                 return Ok(new
                 {
                     code = 0,
                     msg = "success",
-                    count = rm.Data.Count,
+                    count = response.Data.Count,
                     data = new
                     {
-                        allDevices = rm.Data,
-                        activeDevices = rmActive.Data
+                        allDevices = response.Data,
+                        activeDevices = ActiveResponse.Data//rmActive.Data
                     }
                 });
             }
