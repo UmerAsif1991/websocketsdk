@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Qiandao.Service;
@@ -53,24 +52,14 @@ public class Program
             builder.Services.AddSingleton<WebSocketHandler>();
             builder.Services.AddSingleton<ServerManager>();
 
-            //builder.Services.AddControllersWithViews(options =>
-            //{
-            //    options.Filters.Add<SessionExpireFilter>();
-            //});
-
             builder.Services.AddDistributedMemoryCache();
+            // ✅ Session configuration
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(60); // session timeout
+                options.IdleTimeout = TimeSpan.FromMinutes(60); // Session timeout
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
-
-            //builder.Services.AddRazorPages(options =>
-            //{
-            //    options.Conventions.ConfigureFilter(new SessionExpirePageFilter());
-            //});
-
 
             // Use Serilog as the logging provider
             builder.Host.UseSerilog();
@@ -87,10 +76,13 @@ public class Program
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseRouting();
-            app.UseAuthorization();
 
+            app.UseRouting();
+
+            // ✅ Correct order: Session must be before Auth/Middleware
             app.UseSession();
+
+            app.UseAuthorization();
 
             app.UseMiddleware<SessionValidationMiddleware>();
 

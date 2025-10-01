@@ -627,22 +627,39 @@ namespace Qiandao.Web.WebSocketHandler
               await  UpdateCommandStatusx(sn, "getuserlist", machine_commandService);
             }
         }
-        public async void GetUserInfo(JToken jsonNode, EnrollinfoService enrollinfoService, PersonService personService, Machine_commandService machine_Commandservice)
+        public async Task GetUserInfo(JToken jsonNode,
+                              EnrollinfoService enrollinfoService,
+                              PersonService personService,
+                              Machine_commandService machine_Commandservice)
         {
-            var result = jsonNode.Value<bool>("result");
-            var sn = jsonNode.Value<string>("sn");
-
-            int tenantId = personService.GetTenantFromDeviceSerial(sn);
-
-            bool flag = false;
-            if (result)
+            try
             {
-                var backupnum = jsonNode.Value<int>("backupnum");
-                var signatures1 = jsonNode.Value<string>("record");
-                var enrollId = jsonNode.Value<long>("enrollid");
-                var name = jsonNode.Value<string>("name");
-                var admin = jsonNode.Value<int>("admin");
+                if (jsonNode == null)
+                {
+                    Log.Error("GetUserInfo: jsonNode is null");
+                    return;
+                }
+
+                var result = jsonNode.Value<bool?>("result") ?? false;
+                var sn = jsonNode.Value<string>("sn");
+
+                if (string.IsNullOrEmpty(sn))
+                {
+                    _logger.LogError("GetUserInfo: Device serial (sn) is null or empty");
+                    return;
+                }
+
+                int tenantId = personService.GetTenantFromDeviceSerial(sn);
+                _logger.LogError($"TenantID We got from GetTenantFromDeviceSerial: {tenantId}");
+                if (!result) return;
+
+                var backupnum = jsonNode.Value<int?>("backupnum") ?? 0;
                 var signatures = jsonNode.Value<string>("record");
+                var enrollId = jsonNode.Value<long?>("enrollid") ?? 0;
+                var name = jsonNode.Value<string>("name");
+                var admin = jsonNode.Value<int?>("admin") ?? 0;
+
+                if (string.IsNullOrEmpty(signatures)) return;
 
                 var person = new Person
                 {
@@ -651,50 +668,65 @@ namespace Qiandao.Web.WebSocketHandler
                     Roll_id = admin,
                     TenantId = tenantId
                 };
-                
-                if (signatures.IsNullOrEmpty()) {
-                    return;
-                }
+
                 var enrollInfo = enrollinfoService.SelectByBackupnum(enrollId, backupnum, tenantId);
+
                 if (backupnum == 50)
                 {
                     var picName = Guid.NewGuid().ToString();
-                    flag = ImageProcess.Base64ToImage(signatures, $"{picName}.jpg");
+                    bool flag = ImageProcess.Base64ToImage(signatures, $"{picName}.jpg");
+
                     if (flag)
                     {
+                        if (enrollInfo == null)
+                        {
+                            enrollInfo = new Enrollinfo
+                            {
+                                Enroll_id = enrollId,  // ✅ required property
+                                Backupnum = backupnum,
+                                TenantId = tenantId
+                            };
+                        }
+
                         enrollInfo.ImagePath = $"{picName}.jpg";
                     }
+
                 }
 
-                if (personService.SelectByPrimaryKey(enrollId,tenantId).Result == null)
+                if (await personService.SelectByPrimaryKey(enrollId, tenantId) == null)
                 {
                     personService.AddPerson(person);
                 }
                 else
                 {
-                  await  personService.UpdateByPrimaryKey(person);
+                    await  personService.UpdateByPrimaryKey(person);
                 }
+
+                // EnrollInfo insert/update
                 if (enrollInfo == null)
                 {
-                    Enrollinfo enrollinfo = new Enrollinfo
+                    Enrollinfo newEnrollinfo = new Enrollinfo
                     {
                         Enroll_id = enrollId,
                         Backupnum = backupnum,
-                        ImagePath = enrollInfo?.ImagePath,
+                        ImagePath = null,
                         Signatures = signatures,
                         TenantId = tenantId
                     };
-                 await   enrollinfoService.Insert(enrollinfo);
+                    await   enrollinfoService.Insert(newEnrollinfo);
                 }
                 else
                 {
                     enrollInfo.Signatures = signatures;
-                   await  enrollinfoService.updateByPrimaryKeySelective(enrollInfo);
+                    await  enrollinfoService.updateByPrimaryKeySelective(enrollInfo);
                 }
+
+                await UpdateCommandStatusx(sn, "getuserinfo", machine_Commandservice);
             }
-            if (sn != null)
+            catch (Exception ex)
             {
-             await   UpdateCommandStatusx(sn, "getuserinfo", machine_Commandservice);
+                _logger.LogError(ex, "Error in GetUserInfo");
+                // Avoid crashing the whole app
             }
         }
 
